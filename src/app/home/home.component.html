@@ -1,5 +1,5 @@
 <div class="site-wrap">
- <app-header></app-header>
+  <app-header></app-header>
   <div class="site-blocks-cover overlay" style="background-image: url(assets/images/hero_1.jpg);" data-aos="fade"
     data-stellar-background-ratio="0.5">
     <div class="container">
@@ -7,10 +7,9 @@
 
         <div class="col-md-10">
 
-
           <div class="row justify-content-center mb-4">
             <div class="col-md-10 text-center">
-              <h1 data-aos="fade-up">Meet someone for keeps</h1>
+              <h1 data-aos="fade-up">Meet someone special</h1>
             </div>
           </div>
 
@@ -20,85 +19,26 @@
                 <h3> Search your Soulmate </h3>
               </div>
               <div class="row align-items-center">
+
                 <div class="col-lg-12 col-xl-3 no-sm-border border-right pb-2">
-                  <input type="text" class="form-control" placeholder="City">
+                  By Cast
                 </div>
+
                 <div class="col-lg-12 col-xl-3 no-sm-border border-right pb-2">
-                  <input type="text" class="form-control" placeholder="Country">
+                  By Address
                 </div>
 
-                <div class="col-lg-12 col-xl-3 pb-2">
-                  <div class="select-wrap">
-                    <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
-                    <select class="form-control" name="" id="">
-                      <option value="">Education</option>
-                      <option value="">Matric</option>
-                      <option value="">Inter</option>
-                      <option value="">Undergraduate</option>
-                      <option value="">Post Graduate</option>
-                      <option value="">Others</option>
-                    </select>
-                  </div>
+                <div class="col-lg-12 col-xl-3 no-sm-border border-right pb-2">
+                  By Education Level
                 </div>
 
-                <div class="col-lg-12 col-xl-3 pb-2">
-                  <div class="select-wrap">
-                    <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
-                    <select class="form-control" name="" id="">
-                      <option value="">Cast</option>
-                      <option value="">Sheikh</option>
-                      <option value="">Mughal</option>
-                      <option value="">Jutt</option>
-                      <option value="">Butt</option>
-                      <option value="">Others</option>
-                    </select>
-                  </div>
+                <div class="col-lg-12 col-xl-3  pb-2">
+                  By Mother Tongue
                 </div>
 
-                <div class="col-lg-12 col-xl-3 pb-2">
-                  <div class="select-wrap">
-                    <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
-                    <select class="form-control" name="" id="">
-                      <option value="">Mother Tongue</option>
-                      <option value="">Urdu</option>
-                      <option value="">English</option>
-                      <option value="">Hindi</option>
-                      <option value="">Arabic</option>
-                      <option value="">Others</option>
-                    </select>
-                  </div>
-                </div>
 
-                <div class="col-lg-12 col-xl-3 pb-2">
-                  <div class="select-wrap">
-                    <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
-                    <select class="form-control" name="" id="">
-                      <option value="">Religion</option>
-                      <option value="">Islam</option>
-                      <option value="">Sikh</option>
-                      <option value="">Christin</option>
-                      <option value="">Hindu</option>
-                      <option value="">Others</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-lg-12 col-xl-3 pb-2">
-                  <div class="select-wrap">
-                    <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
-                    <select class="form-control" name="" id="">
-                      <option value="">Martial Status</option>
-                      <option value="">UnMarried</option>
-                      <option value="">Married</option>
-                      <option value="">Divorced</option>
-                      <option value="">Widowed</option>
-                      <option value="">Others</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-lg-12 col-xl-2 ml-auto text-right">
-                  <input type="submit" class="btn text-white btn-primary" value="Search">
+                <div class="col-lg-12 col-xl-2 ml-auto text-right pt-5">
+                  <input type="submit" class="btn text-white btn-primary" (click)="expression">
                 </div>
 
               </div>
@@ -123,80 +63,16 @@
       </div>
 
       <div class="row">
-        <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
-          <div class="listing-item">
-            <div class="listing-image">
-              <img src="assets/images/img_1.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-            </div>
-            <div class="listing-item-content">
-              <a class="px-3 mb-3 category" href="#">View profile</a>
-              <h2 class="mb-1"><a href="listings-single.html">Name of Profile</a></h2>
-              <span class="address">West Orange, New York</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
+        <div class="col-md-6 mb-4 mb-lg-4 col-lg-4" *ngFor="let item of list?.featured">
           <div class="listing-item">
             <div class="listing-image">
-              <img src="assets/images/img_1.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+              <img [src]="item.image" [alt]="item.image" class="img-fluid">
             </div>
             <div class="listing-item-content">
               <a class="px-3 mb-3 category" href="#">View profile</a>
-              <h2 class="mb-1"><a href="listings-single.html">Name of Profile</a></h2>
-              <span class="address">West Orange, New York</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
-          <div class="listing-item">
-            <div class="listing-image">
-              <img src="assets/images/img_1.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-            </div>
-            <div class="listing-item-content">
-              <a class="px-3 mb-3 category" href="#">View profile</a>
-              <h2 class="mb-1"><a href="listings-single.html">Name of Profile</a></h2>
-              <span class="address">West Orange, New York</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
-          <div class="listing-item">
-            <div class="listing-image">
-              <img src="assets/images/img_1.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-            </div>
-            <div class="listing-item-content">
-              <a class="px-3 mb-3 category" href="#">View profile</a>
-              <h2 class="mb-1"><a href="listings-single.html">Name of Profile</a></h2>
-              <span class="address">West Orange, New York</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
-          <div class="listing-item">
-            <div class="listing-image">
-              <img src="assets/images/img_1.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-            </div>
-            <div class="listing-item-content">
-              <a class="px-3 mb-3 category" href="#">View profile</a>
-              <h2 class="mb-1"><a href="listings-single.html">Name of Profile</a></h2>
-              <span class="address">West Orange, New York</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
-          <div class="listing-item">
-            <div class="listing-image">
-              <img src="assets/images/img_1.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-            </div>
-            <div class="listing-item-content">
-              <a class="px-3 mb-3 category" href="#">View profile</a>
-              <h2 class="mb-1"><a href="listings-single.html">Name of Profile</a></h2>
-              <span class="address">West Orange, New York</span>
+              <h2 class="mb-1"><a>{{item.name}}</a></h2>
+              <span class="address">{{item.address}}</span>
             </div>
           </div>
         </div>
@@ -219,7 +95,7 @@
         <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
           <div class="how-it-work-step">
             <div class="img-wrap">
-              <img src="assets/images/step-2.svg" alt="Free website template by Free-Template.co" class="img-fluid">
+              <img src="assets/images/step-2.svg" alt="" class="img-fluid">
             </div>
             <span class="number">1</span>
             <h3>SignUp</h3>
@@ -229,7 +105,7 @@
         <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
           <div class="how-it-work-step">
             <div class="img-wrap">
-              <img src="assets/images/step-1.svg" alt="Free website template by Free-Template.co" class="img-fluid">
+              <img src="assets/images/step-1.svg" alt="" class="img-fluid">
             </div>
             <span class="number">2</span>
             <h3>Connect</h3>
@@ -239,7 +115,7 @@
         <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
           <div class="how-it-work-step">
             <div class="img-wrap">
-              <img src="assets/images/step-3.svg" alt="Free website template by Free-Template.co" class="img-fluid">
+              <img src="assets/images/step-3.svg" alt="" class="img-fluid">
             </div>
             <span class="number">3</span>
             <h3>Interact</h3>
@@ -251,74 +127,6 @@
   </div>
 
 
-  <div class="site-section bg-light">
-    <div class="container">
-
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-7 text-center border-primary">
-          <h2 class="font-weight-light text-primary">Satisfied Customers</h2>
-        </div>
-      </div>
-
-      <div class="slide-one-item home-slider owl-carousel">
-        <div>
-          <div class="testimonial">
-            <figure class="mb-4">
-              <img src="assets/images/person_3_sq.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid mb-3">
-              <p>Willie Smith</p>
-            </figure>
-            <blockquote>
-              <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
-                language ocean.&rdquo;</p>
-            </blockquote>
-          </div>
-        </div>
-        <div>
-          <div class="testimonial">
-            <figure class="mb-4">
-              <img src="assets/images/person_2_sq.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid mb-3">
-              <p>Robert Jones</p>
-            </figure>
-            <blockquote>
-              <p>&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It
-                is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
-            </blockquote>
-          </div>
-        </div>
-
-        <div>
-          <div class="testimonial">
-            <figure class="mb-4">
-              <img src="assets/images/person_4_sq.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid mb-3">
-              <p>Peter Richmond</p>
-            </figure>
-            <blockquote>
-              <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
-                unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to
-                leave for the far World of Grammar.&rdquo;</p>
-            </blockquote>
-          </div>
-        </div>
-
-        <div>
-          <div class="testimonial">
-            <figure class="mb-4">
-              <img src="assets/images/person_5_sq.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid mb-3">
-              <p>Bruce Rogers</p>
-            </figure>
-            <blockquote>
-              <p>&ldquo;The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild
-                Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven
-                versalia, put her initial into the belt and made herself on the way.&rdquo;</p>
-            </blockquote>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
   <div class="site-section">
     <div class="container">
       <div class="row justify-content-center mb-5">
@@ -327,40 +135,17 @@
           <p class="color-black-opacity-5">See Our selection of Grooms</p>
         </div>
       </div>
+
       <div class="row mb-3 align-items-stretch">
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" *ngFor="let item of list?.featuredmale">
           <div class="h-entry">
-            <img src="assets/images/img_1.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            <img [src]="item.image" [alt]="item.image" class="img-fluid">
             <div class="h-entry-inner">
-              <h2 class="font-size-regular"><a href="#">Name of Groom</a></h2>
-              <div class="meta mb-4"> <a> Faisalabad Pakistan</a> <span class="mx-2"> </span>Age 24 years
+              <h2 class="font-size-regular"><a href="#">{{item.name}}</a></h2>
+              <div class="meta mb-4"> <a> {{item.cast}}</a> <span class="mx-2"> </span>Age {{item.age}}
               </div>
-              <p>description of Groom description of Groom description of Groom description of Groom description of
-                Groom </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-          <div class="h-entry">
-            <img src="assets/images/img_2.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-            <div class="h-entry-inner">
-              <h2 class="font-size-regular"><a href="#">Name of Groom</a></h2>
-              <div class="meta mb-4"> <a> Karachi Pakistan</a> <span class="mx-2"> </span>Age 24 years
-              </div>
-              <p>description of Groom description of Groom description of Groom description of Groom description of
-                Groom </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-          <div class="h-entry">
-            <img src="assets/images/img_3.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-            <div class="h-entry-inner">
-              <h2 class="font-size-regular"><a href="#">Name of Groom</a></h2>
-              <div class="meta mb-4"> <a> Islamadbad Pakistan</a> <span class="mx-2"> </span>Age 24 years
-              </div>
-              <p>description of Groom description of Groom description of Groom description of Groom description of
-                Groom </p>
+              <p>{{item.address}}</p>
             </div>
           </div>
         </div>
@@ -378,164 +163,139 @@
         </div>
       </div>
       <div class="row mb-3 align-items-stretch">
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" *ngFor="let item of list?.featuredfemale">
           <div class="h-entry">
-            <img src="assets/images/img_1.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            <img [src]="item.image" [alt]="item.image" class="img-fluid">
             <div class="h-entry-inner">
-              <h2 class="font-size-regular"><a href="#">Name of Bride</a></h2>
-              <div class="meta mb-4"> <a> Faisalabad Pakistan</a> <span class="mx-2"> </span>Age 24 years
+              <h2 class="font-size-regular"><a href="#">{{item.name}}</a></h2>
+              <div class="meta mb-4"> <a> {{item.cast}}</a> <span class="mx-2"> </span>Age {{item.age}}
               </div>
-              <p>description of Bride description of Bride description of Bride description of Bride description of
-                Bride </p>
+              <p>{{item.address}}</p>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-          <div class="h-entry">
-            <img src="assets/images/img_2.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-            <div class="h-entry-inner">
-              <h2 class="font-size-regular"><a href="#">Name of Bride</a></h2>
-              <div class="meta mb-4"> <a> Karachi Pakistan</a> <span class="mx-2"> </span>Age 24 years
-              </div>
-              <p>description of Bride description of Bride description of Bride description of Bride description of
-                Bride </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-          <div class="h-entry">
-            <img src="assets/images/img_3.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-            <div class="h-entry-inner">
-              <h2 class="font-size-regular"><a href="#">Name of Bride</a></h2>
-              <div class="meta mb-4"> <a> Islamadbad Pakistan</a> <span class="mx-2"> </span>Age 24 years
-              </div>
-              <p>description of Bride description of Bride description of Bride description of Bride description of
-                Bride </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
- 
-
-  <div class="pl-5 pt-5 site-footer bg-light">
-    <h1 class="font-weight-light text-primary pb-5 text-center">Search By Popular Matchmaking Site</h1>
-    <div class="row">
-      <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
-        <h2 class="footer-heading mb-4">Mother tongue</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <ul class="list-unstyled">
-              <li><a class="item-font" href="#">Urdu</a></li>
-              <li><a class="item-font" href="#">English</a></li>
-              <li><a class="item-font" href="#">Hindi</a></li>
-              <li><a class="item-font" href="#">Arabic</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-unstyled">
-              <li><a class="item-font" href="#">Punjabi</a></li>
-              <li><a class="item-font" href="#">Persion</a></li>
-              <li><a class="item-font" href="#">Balochi</a></li>
-              <li><a class="item-font" href="#">Pashto</a></li>
-            </ul>
-          </div>
-
-        </div>
-
-      </div>
-      <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
-        <h2 class="footer-heading mb-4 pl-5">Cast</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <ul class="list-unstyled">
-              <li><a class="item-font" href="#">Sheikh</a></li>
-              <li><a class="item-font" href="#">Jutt</a></li>
-              <li><a class="item-font" href="#">Mughal</a></li>
-              <li><a class="item-font" href="#">Butt</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-unstyled">
-              <li><a class="item-font" href="#">Sulehria</a></li>
-              <li><a class="item-font" href="#">Jutt</a></li>
-              <li><a class="item-font" href="#">Mughal</a></li>
-              <li><a class="item-font" href="#">Butt</a></li>
-            </ul>
-          </div>
-
-        </div>
-
-      </div>
-      <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
-        <h2 class="footer-heading mb-4 pl-5">Cities</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <ul class="list-unstyled">
-              <li><a class="item-font" href="#">Lahore</a></li>
-              <li><a class="item-font" href="#">Islamabad</a></li>
-              <li><a class="item-font" href="#">Karachi</a></li>
-              <li><a class="item-font" href="#">Quetta</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-unstyled">
-              <li><a class="item-font" href="#">Peshawar</a></li>
-              <li><a class="item-font" href="#">Gujranwala</a></li>
-              <li><a class="item-font" href="#">Sialkot</a></li>
-              <li><a class="item-font" href="#">Rawalpindi</a></li>
-            </ul>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
-        <h2 class="footer-heading mb-4 pl-5">Countries</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <ul class="list-unstyled">
-              <li><a class="item-font" href="#"></a></li>
-              <li><a class="item-font" href="#">Pakistan</a></li>
-              <li><a class="item-font" href="#">India</a></li>
-              <li><a class="item-font" href="#">Saudia</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-unstyled">
-              <li><a class="item-font" href="#">America</a></li>
-              <li><a class="item-font" href="#">Canada</a></li>
-              <li><a class="item-font" href="#">London</a></li>
-              <li><a class="item-font" href="#">Malaysia</a></li>
-            </ul>
           </div>
         </div>
       </div>
     </div>
 
-  </div>
 
-  <div class="py-5 bg-primary">
-    <div class="container">
+
+
+    <div class="pl-5 pt-5 site-footer bg-light">
+      <h1 class="font-weight-light text-primary pb-5 text-center">Search By Popular Matchmaking Site</h1>
       <div class="row">
-        <div class="col-lg-7 mr-auto mb-4 mb-lg-0">
-          <h2 class="mb-3 mt-0 text-white">Your Story is waiting to happen</h2>
+        <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
+          <h2 class="footer-heading mb-4">Mother tongue</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <ul class="list-unstyled">
+                <li><a class="item-font" href="#">Urdu</a></li>
+                <li><a class="item-font" href="#">English</a></li>
+                <li><a class="item-font" href="#">Hindi</a></li>
+                <li><a class="item-font" href="#">Arabic</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="list-unstyled">
+                <li><a class="item-font" href="#">Punjabi</a></li>
+                <li><a class="item-font" href="#">Persion</a></li>
+                <li><a class="item-font" href="#">Balochi</a></li>
+                <li><a class="item-font" href="#">Pashto</a></li>
+              </ul>
+            </div>
+
+          </div>
+
         </div>
-        <div class="col-lg-4">
-          <p class="mb-0"><a href="signup.html"
-              class="btn btn-outline-white text-white font-weight-bold btn-md-block">Sign Up</a></p>
+        <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
+          <h2 class="footer-heading mb-4 pl-5">Cast</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <ul class="list-unstyled">
+                <li><a class="item-font" href="#">Sheikh</a></li>
+                <li><a class="item-font" href="#">Jutt</a></li>
+                <li><a class="item-font" href="#">Mughal</a></li>
+                <li><a class="item-font" href="#">Butt</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="list-unstyled">
+                <li><a class="item-font" href="#">Sulehria</a></li>
+                <li><a class="item-font" href="#">Jutt</a></li>
+                <li><a class="item-font" href="#">Mughal</a></li>
+                <li><a class="item-font" href="#">Butt</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
+          <h2 class="footer-heading mb-4 pl-5">Cities</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <ul class="list-unstyled">
+                <li><a class="item-font" href="#">Lahore</a></li>
+                <li><a class="item-font" href="#">Islamabad</a></li>
+                <li><a class="item-font" href="#">Karachi</a></li>
+                <li><a class="item-font" href="#">Quetta</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="list-unstyled">
+                <li><a class="item-font" href="#">Peshawar</a></li>
+                <li><a class="item-font" href="#">Gujranwala</a></li>
+                <li><a class="item-font" href="#">Sialkot</a></li>
+                <li><a class="item-font" href="#">Rawalpindi</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
+          <h2 class="footer-heading mb-4 pl-5">Countries</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <ul class="list-unstyled">
+                <li><a class="item-font" href="#"></a></li>
+                <li><a class="item-font" href="#">Pakistan</a></li>
+                <li><a class="item-font" href="#">India</a></li>
+                <li><a class="item-font" href="#">Saudia</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="list-unstyled">
+                <li><a class="item-font" href="#">America</a></li>
+                <li><a class="item-font" href="#">Canada</a></li>
+                <li><a class="item-font" href="#">London</a></li>
+                <li><a class="item-font" href="#">Malaysia</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="py-5 bg-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 mr-auto mb-4 mb-lg-0">
+            <h2 class="mb-3 mt-0 text-white">Your Story is waiting to happen</h2>
+          </div>
+          <div class="col-lg-4">
+            <p class="mb-0"><a href="signup.html"
+                class="btn btn-outline-white text-white font-weight-bold btn-md-block">Sign Up</a></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
- <app-footer></app-footer>
-</div>
+    <app-footer></app-footer>
+
+  </div>
 
 
   <!-- <div class="site-section">
@@ -664,3 +424,78 @@
   </div>
 </div> -->
 
+
+  <!-- <div class="site-section bg-light">
+  <div class="container">
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-7 text-center border-primary">
+        <h2 class="font-weight-light text-primary">Satisfied Customers</h2>
+      </div>
+    </div>
+
+    <div class="slide-one-item home-slider owl-carousel">
+
+      <div>
+        <div class="testimonial">
+          <figure class="mb-4">
+            <img src="assets/images/person_3_sq.jpg" alt="Free Website Template by Free-Template.co"
+              class="img-fluid mb-3">
+            <p>Willie Smith</p>
+          </figure>
+          <blockquote>
+            <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+              live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+              language ocean.&rdquo;</p>
+          </blockquote>
+        </div>
+      </div>
+
+
+      <div>
+        <div class="testimonial">
+          <figure class="mb-4">
+            <img src="assets/images/person_2_sq.jpg" alt="Free Website Template by Free-Template.co"
+              class="img-fluid mb-3">
+            <p>Robert Jones</p>
+          </figure>
+          <blockquote>
+            <p>&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It
+              is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
+          </blockquote>
+        </div>
+      </div>
+
+      <div>
+        <div class="testimonial">
+          <figure class="mb-4">
+            <img src="assets/images/person_4_sq.jpg" alt="Free Website Template by Free-Template.co"
+              class="img-fluid mb-3">
+            <p>Peter Richmond</p>
+          </figure>
+          <blockquote>
+            <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
+              unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to
+              leave for the far World of Grammar.&rdquo;</p>
+          </blockquote>
+        </div>
+      </div>
+
+      <div>
+        <div class="testimonial">
+          <figure class="mb-4">
+            <img src="assets/images/person_5_sq.jpg" alt="Free Website Template by Free-Template.co"
+              class="img-fluid mb-3">
+            <p>Bruce Rogers</p>
+          </figure>
+          <blockquote>
+            <p>&ldquo;The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild
+              Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven
+              versalia, put her initial into the belt and made herself on the way.&rdquo;</p>
+          </blockquote>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div> -->

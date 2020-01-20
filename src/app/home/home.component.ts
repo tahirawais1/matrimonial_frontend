@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../theme/services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
+  list;
 
-  constructor() { }
+  constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
+    this.list = this.dataService.listinings;
+
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../theme/services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listings',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListingsComponent implements OnInit {
 
-  constructor() { }
+  list;
+
+  constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
+    this.list = this.dataService.listinings;
+
   }
 
 }
