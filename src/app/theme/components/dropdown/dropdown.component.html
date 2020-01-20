@@ -1,0 +1,8 @@
+<mat-form-field  >
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option (selectionChange)="onSelectionChange(args)"  *ngFor="let item of ['a','b']" [value]="item">
+      {{item}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

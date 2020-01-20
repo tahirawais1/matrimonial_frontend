@@ -1,0 +1,34 @@
+<ng-container *ngFor="let form of generateForm">
+  <div>
+    
+    
+    <app-formTitle [title]="form.formTitle"></app-formTitle>
+    
+    <ng-container *ngFor="let item of form.formFields">
+
+
+      <!-- <ng-container *ngIf="checkType(item) == 'object'"> -->
+      <ng-container *ngIf="item.inputType=='textField'">
+        <app-textField [rformgroup]="myFromGroup" [rformcontrolname]="item.formControlName"
+          [placeholder]="item?.placeholder">
+        </app-textField>
+      </ng-container>
+
+      <ng-container *ngIf="item.inputType=='textArea'">
+
+      </ng-container>
+
+      <ng-container *ngIf="item.inputType=='dropdown'">
+        <app-dropdown [rformgroup]="myFromGroup"> </app-dropdown>
+      </ng-container>
+      <!-- </ng-container> -->
+
+      <!-- <GridLayout rows="auto" columns="*,*" *ngIf="checkType(item) == 'array'">
+        <ng-continer *ngFor="let inputItem of item; let i=index">
+          <ns-textField [rformgroup]="myFromGroup" gridStructure="true" [rformcontrolname]="inputItem.formControlName"
+            [col]="i" [placeholder]="inputItem.placeholder"></ns-textField>
+        </ng-continer>
+      </GridLayout> -->
+    </ng-container>
+  </div>
+</ng-container>

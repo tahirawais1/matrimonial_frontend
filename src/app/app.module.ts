@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { ThemeModule } from './theme/theme.module';
 import { SignupComponent } from './signup/signup.component';
 import { ListingsComponent } from './listings/listings.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
    declarations: [
@@ -18,7 +20,10 @@ import { ListingsComponent } from './listings/listings.component';
    imports: [
       BrowserModule,
       AppRoutingModule,
-      ThemeModule
+      ThemeModule,
+      FormsModule,
+      ReactiveFormsModule,
+      BrowserAnimationsModule
    ],
    providers: [],
    bootstrap: [
