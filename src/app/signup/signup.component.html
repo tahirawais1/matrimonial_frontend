@@ -24,9 +24,9 @@
 
       <div class="col-md-6 mb-5 ">
         <div class="p-5 bg-white" style="margin-top: -150px;">
-            <h3 class="pb-3">Register Now</h3>
-          <app-inputControlSelector [myFromGroup]="signUpFormGroup" [generateForm]="signupData"></app-inputControlSelector>
-         
+          <h3 class="pb-3">Register Now</h3>
+          <app-inputControlSelector [myFromGroup]="signUpFormGroup" [generateForm]="signupData">
+          </app-inputControlSelector>
           <div class="row form-group pt-5">
             <div class="col-md-12">
               <input type="submit" value="Sign Up" (click)="onSignup()" class="btn btn-primary btn-md text-white">

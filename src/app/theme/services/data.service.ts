@@ -39,6 +39,20 @@ export class DataService {
         cast: 'Cast',
         image:'assets/images/img_1.jpg'
       },
+      {
+        id: 4,
+        name: 'Name of Bride/groom',
+        address: 'Adress of bride or groom',
+        cast: 'Cast',
+        image:'assets/images/img_1.jpg'
+      },
+      {
+        id: 5,
+        name: 'Name of Bride/groom',
+        address: 'Adress of bride or groom',
+        cast: 'Cast',
+        image:'assets/images/img_1.jpg'
+      },
     ],
     featuredfemale: [
       {

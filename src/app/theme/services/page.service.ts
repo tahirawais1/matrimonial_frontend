@@ -20,10 +20,6 @@ export class PageService {
   changeRoute(route) {
     this.currentRoute = route;
     this.router.navigate([route]);
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-      // window.location.reload();
-    }, 50);
   }
 
 

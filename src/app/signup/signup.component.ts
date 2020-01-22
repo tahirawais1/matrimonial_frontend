@@ -29,53 +29,7 @@ export class SignupComponent implements OnInit {
     }
   ];
   signupData = [
-    {
-      formTitle: "Personal Information",
 
-      formFields: [
-        {
-          inputType: "textField",
-          placeholder: "First Name",
-          formControlName: "first_name",
-        },
-        {
-          inputType: "textField",
-          placeholder: "Last Name",
-          formControlName: "last_name",
-        },
-        {
-          inputType: "textField",//Radio Button
-
-          placeholder: "Gender",
-          formControlName: "gender",
-        },
-        {
-          inputType: "textField", //Date picker
-          placeholder: "Date Of Birth",
-          formControlName: "dob",
-        },
-        {
-          inputType: "textField",
-          placeholder: "height",
-          formControlName: "height",
-        },
-        {
-          inputType: "textField",
-          placeholder: "Cast",
-          formControlName: "cast",
-        },
-        {
-          inputType: "textField",
-          placeholder: "Religion",
-          formControlName: "religion",
-        },
-        {
-          inputType: "textField",
-          placeholder: "Mother Tongue",
-          formControlName: "motherTongue",
-        },
-      ]
-    },
     {
       formTitle: "Account Information",
 
@@ -97,9 +51,90 @@ export class SignupComponent implements OnInit {
           placeholder: "Chose your Password",
           formControlName: "password",
         },
+        {
+          inputType: "textField",
+          placeholder: "Confirm your Password",
+          formControlName: "confirmpassword",
+        },
       ]
     },
 
+    {
+      formTitle: "Personal Information",
+
+      formFields: [
+        {
+          inputType:"radioBtn",
+          option : [ 
+            {value:'male' , label:'Male'},
+            {value:'female' , label:'Female'} ] ,
+          formControlName: "gender",
+        },
+        {
+          inputType: "textField",
+          placeholder: "First Name",
+          formControlName: "first_name",
+        },
+        {
+          inputType: "textField",
+          placeholder: "Last Name",
+          formControlName: "last_name",
+        },
+        {
+          inputType: "datePicker",
+          placeholder: "Date Of Birth",
+          formControlName: "dob",
+        },
+        {
+          inputType:"dropdown",
+          placeholder: "Martial Status",
+          option:
+          [ 
+            {value:'neverMarried' , text:'Never Married'},
+            {value:'divorced' , text:'Divorced'},
+            {value:'widowed' , text:'Widowed'}, 
+            {value:'secondMariage' , text:'Second Marriage'}, 
+          ] ,
+          formControlName: "martialStatus",
+        },
+        {
+          inputType: "textField",
+          placeholder: "height",
+          formControlName: "height",
+        },
+        {
+          inputType: "textField",
+          placeholder: "Cast",
+          formControlName: "cast",
+        },
+        {
+          inputType: "textField",
+          placeholder: "Religion",
+          formControlName: "religion",
+        },
+        {
+          inputType: "textField",
+          placeholder: "Mother Tongue",
+          formControlName: "motherTongue",
+        },
+        {
+          inputType:"dropdown",
+          placeholder: "Mother Tongue",
+          option:
+          [ 
+            {value:'english' , text:'English'},
+            {value:'urdu' , text:'Urdu'},
+            {value:'punjabi' , text:'Punjabi'}, 
+            {value:'sindhi' , text:'Sindhi'}, 
+            {value:'pashto' , text:'Pashto'}, 
+            {value:'saraiki' , text:'Saraiki'}, 
+          ] ,
+          formControlName: "motherTongue",
+        },
+        
+      ]
+    },
+    
     {
       formTitle: "Education",
 
@@ -110,8 +145,16 @@ export class SignupComponent implements OnInit {
           formControlName: "institute",
         },
         {
-          inputType: "textField",
+          inputType:"dropdown",
           placeholder: "Education Level",
+          option:
+          [ 
+            {value:'diploma' , text:'Diploma'},
+            {value:'matric' , text:'Matric'},
+            {value:'tntermediate' , text:'Intermediate'}, 
+            {value:'graduate' , text:'Graduate'}, 
+            {value:'masters' , text:'Masters'}, 
+          ] ,
           formControlName: "educationLevel",
         },
         {
@@ -148,6 +191,11 @@ export class SignupComponent implements OnInit {
       formFields: [
         {
           inputType: "textField",
+          placeholder: "Mailing Address",
+          formControlName: "address",
+        },
+        {
+          inputType: "textField",
           placeholder: "City",
           formControlName: "city",
         },
@@ -156,11 +204,7 @@ export class SignupComponent implements OnInit {
           placeholder: "Country",
           formControlName: "country",
         },
-        {
-          inputType: "textField",//Radio Button
-          placeholder: "Martial Status",
-          formControlName: "martialStatus",
-        },
+        
       ]
     }
   ];
@@ -175,6 +219,11 @@ export class SignupComponent implements OnInit {
     })
 
     this.signUpFormGroup = this.formBuilder.group({
+      mobile: new FormControl(''),
+      email: new FormControl(''),
+      password: new FormControl(''),
+      confirmpassword: new FormControl(''),
+
       first_name: new FormControl(''),
       last_name: new FormControl(''),
       gender: new FormControl(''),
@@ -182,19 +231,19 @@ export class SignupComponent implements OnInit {
       height: new FormControl(''),
       cast: new FormControl(''),
       religion: new FormControl(''),
+      martialStatus: new FormControl(''),
       motherTongue: new FormControl(''),
-      mobile: new FormControl(''),
-      email: new FormControl(''),
-      password: new FormControl(''),
+
       institute: new FormControl(''),
       educationLevel: new FormControl(''),
       educationField: new FormControl(''),
+
       profession: new FormControl(''),
       company: new FormControl(''),
       income: new FormControl(''),
+      address: new FormControl(''),
       city: new FormControl(''),
       country: new FormControl(''),
-      martialStatus: new FormControl(''),
     })
   }
 

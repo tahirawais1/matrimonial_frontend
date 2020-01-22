@@ -1,7 +1,10 @@
 
 import { Component, OnInit, Input } from "@angular/core";
 import { FormGroup } from '@angular/forms';
-
+export interface Option {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: "app-dropdown",
   templateUrl: "./dropdown.component.html",
@@ -10,9 +13,11 @@ import { FormGroup } from '@angular/forms';
 
 export class DropdownComponent implements OnInit {
 
+  
   @Input() rformgroup: FormGroup;
-  @Input() rformcontrolname: FormGroup;
-
+  @Input() rformcontrolname;
+  @Input() placeholder;
+  @Input() options: Option[] = [];
   constructor() {
     //
   }

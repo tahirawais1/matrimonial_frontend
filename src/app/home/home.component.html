@@ -38,7 +38,9 @@
 
 
                 <div class="col-lg-12 col-xl-2 ml-auto text-right pt-5">
-                  <input type="submit" class="btn text-white btn-primary" (click)="expression">
+                  <div class="btn text-white btn-primary" (click)="redirectTo('/listings')">
+                  Search
+                  </div>
                 </div>
 
               </div>
@@ -142,8 +144,10 @@
           <div class="h-entry">
             <img [src]="item.image" [alt]="item.image" class="img-fluid">
             <div class="h-entry-inner">
-              <h2 class="font-size-regular"><a href="#">{{item.name}}</a></h2>
-              <div class="meta mb-4"> <a> {{item.cast}}</a> <span class="mx-2"> </span>Age {{item.age}}
+              <h2 class="font-size-regular"><a href="/profileDetail"> {{item.name}}</a></h2>
+              <div class="meta mb-4"> <a> {{item.cast}}</a> 
+                <span class="mx-3"> </span>Age {{item.age}}
+
               </div>
               <p>{{item.address}}</p>
             </div>
@@ -168,8 +172,9 @@
           <div class="h-entry">
             <img [src]="item.image" [alt]="item.image" class="img-fluid">
             <div class="h-entry-inner">
-              <h2 class="font-size-regular"><a href="#">{{item.name}}</a></h2>
-              <div class="meta mb-4"> <a> {{item.cast}}</a> <span class="mx-2"> </span>Age {{item.age}}
+              <h2 class="font-size-regular"><a href="/profileDetail">{{item.name}}</a></h2>
+              <div class="meta mb-4"> <a> {{item.cast}}</a>
+              <span class="mx-3"> </span>Age {{item.age}}
               </div>
               <p>{{item.address}}</p>
             </div>

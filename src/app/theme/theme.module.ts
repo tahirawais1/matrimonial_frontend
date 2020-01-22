@@ -1,29 +1,46 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from '../app-routing.module';
-import { HeaderComponent, FooterComponent,UpperFooterComponent} from '.';
 import { PageService } from './services/page.service';
 import { StarAnimationComponent } from './components/starAnimation/starAnimation.component';
 import { TextFieldComponent } from './components/textField/textField.component';
 import { ReactiveFormsModule } from '@angular/forms';
+
+//Angular Material Module
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+
+//Theme Components
+import { HeaderComponent, FooterComponent,UpperFooterComponent, RadioBtnComponent, DatePickerComponent} from '.';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { InputControlSelectorComponent } from './components/inputControlSelector/inputControlSelector.component';
 import { FormTitleComponent } from './components/formTitle/formTitle.component';
+import { MatNativeDateModule } from '@angular/material/core';
+
+
 
 @NgModule({
     imports: [
         CommonModule,
         AppRoutingModule,
         ReactiveFormsModule,
+        //Material Modules
         MatInputModule,
-        MatSelectModule
+        MatSelectModule,
+        MatRadioModule,
+        MatDatepickerModule,
+        MatNativeDateModule 
+
     ],
     declarations: [
         HeaderComponent,
+        DatePickerComponent,
         FooterComponent,
         UpperFooterComponent,
+        RadioBtnComponent,
         StarAnimationComponent,
         TextFieldComponent,
         DropdownComponent,
@@ -32,15 +49,17 @@ import { FormTitleComponent } from './components/formTitle/formTitle.component';
     ],
     exports: [
         FooterComponent,
+        DatePickerComponent,
         HeaderComponent,
         UpperFooterComponent,
         StarAnimationComponent,
         TextFieldComponent,
+        RadioBtnComponent,
         DropdownComponent,
         InputControlSelectorComponent,
         FormTitleComponent
     ],
-    providers: [PageService],
+    providers: [PageService , MatDatepickerModule,],
     entryComponents: [],
 })
 export class ThemeModule {}
