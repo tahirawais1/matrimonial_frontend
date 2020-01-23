@@ -12,14 +12,16 @@ export class HomeComponent implements OnInit {
   
   list;
 
-  constructor(private dataService: DataService , private pageService: PageService) { }
+  constructor(private router: Router, private dataService: DataService , private pageService: PageService) { }
 
   ngOnInit() {
-    this.list = this.dataService.listinings;
+    this.list = this.dataService.listinings.listItems;
 
   }
-  redirectTo(url) {
-    this.pageService.changeRoute(url);
+
+  routeToServices(item) {
+    this.router.navigate(['/profileDetail'], { queryParams: { page: item.id } });
+    window.scrollTo(0, 0);
   }
 
 }

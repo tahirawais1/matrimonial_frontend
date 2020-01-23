@@ -11,10 +11,12 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 
 //Theme Components
-import { HeaderComponent, FooterComponent,UpperFooterComponent, RadioBtnComponent, DatePickerComponent} from '.';
+import { HeaderComponent, FooterComponent,UpperFooterComponent, RadioBtnComponent, DatePickerComponent, TabsComponent} from '.';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { InputControlSelectorComponent } from './components/inputControlSelector/inputControlSelector.component';
 import { FormTitleComponent } from './components/formTitle/formTitle.component';
@@ -32,7 +34,8 @@ import { MatNativeDateModule } from '@angular/material/core';
         MatSelectModule,
         MatRadioModule,
         MatDatepickerModule,
-        MatNativeDateModule 
+        MatNativeDateModule,
+        MatTabsModule 
 
     ],
     declarations: [
@@ -45,7 +48,8 @@ import { MatNativeDateModule } from '@angular/material/core';
         TextFieldComponent,
         DropdownComponent,
         InputControlSelectorComponent,
-        FormTitleComponent
+        FormTitleComponent,
+        TabsComponent
     ],
     exports: [
         FooterComponent,
@@ -57,7 +61,8 @@ import { MatNativeDateModule } from '@angular/material/core';
         RadioBtnComponent,
         DropdownComponent,
         InputControlSelectorComponent,
-        FormTitleComponent
+        FormTitleComponent,
+        TabsComponent
     ],
     providers: [PageService , MatDatepickerModule,],
     entryComponents: [],

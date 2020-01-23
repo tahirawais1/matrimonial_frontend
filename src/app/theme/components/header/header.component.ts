@@ -12,6 +12,11 @@ import { PageService } from '../../services/page.service';
 
 export class HeaderComponent implements OnInit {
   currentRoute = '';
+  tabs=[
+    {name:'Home' ,route:'' },
+    {name:'Sign Up' ,route:'signup', status:'active' },
+    {name:'Listing' ,route:'listings',status:''  },
+  ]
   isContactUs = true;
   constructor(private router: Router, private pageService: PageService, private activatedRoute: ActivatedRoute) { }
 

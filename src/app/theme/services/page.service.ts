@@ -20,6 +20,7 @@ export class PageService {
   changeRoute(route) {
     this.currentRoute = route;
     this.router.navigate([route]);
+    window.scrollTo(0, 0);
   }
 
 

@@ -1,0 +1,13 @@
+<mat-tab-group [selectedIndex]="selectedIndex" animationDuration="0ms" disableRipple
+  (selectedTabChange)="tabClick($event)">
+  <mat-tab [label]="tab.name" *ngFor="let tab of tabs;">
+    <ng-template matTabContent>
+      <ng-container *ngIf="tab.template" [ngTemplateOutlet]="tab.template"
+        [ngTemplateOutletContext]="{ filter: filter }">
+      </ng-container>
+    </ng-template>
+    <div>
+    </div>
+  </mat-tab>
+
+</mat-tab-group>

@@ -7,256 +7,135 @@ export class DataService {
 
   constructor() { }
 
-
   listinings = {
-
-    featured: [
-      {
-        id: 0,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 1,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 2,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 3,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 4,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 5,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-    ],
-    featuredfemale: [
-      {
-        id: 0,
-        name: 'Name of Bride',
-        address: 'Adress of bride',
-        cast: 'Cast',
-        age:'25',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 1,
-        name: 'Name of Bride',
-        address: 'Adress of bride',
-        cast: 'Cast',
-        age:'25',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 2,
-        name: 'Name of Bride',
-        address: 'Adress of bride',
-        cast: 'Cast',
-        age:'25',
-        image:'assets/images/img_1.jpg'
-      },
-
-    ],
-
-    featuredmale: [
-      {
-        id: 0,
-        name: 'Name of groom',
-        address: 'Adress of   groom',
-        cast: 'Cast',
-        age:'25',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 1,
-        name: 'Name of groom',
-        address: 'Adress of   groom',
-        cast: 'Cast',
-        age:'25',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 2,
-        name: 'Name of groom',
-        address: 'Adress of   groom',
-        cast: 'Cast',
-        age:'25',
-        image:'assets/images/img_1.jpg'
-      },
-
-    ],
 
     listItems: [
       {
         id: 0,
-        name: 'Name of Bride/groom',
+        name: 'Hamza',
+        gender:'male',
+        phone:"03007431729", 
+        age:'25',
+        featured:true,
+        email:'tahirawais1123@gmail.com', 
         address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
+        cast: 'sheikh',
+        image:'assets/images/img_1.jpg',
+        description:"Seek suitable alliance for my good looking daughter. Born and brought up in UAE. Studying final year Architect in UAE. We're religious, follow sunnah, hijab and rich/affluent family. Groom age should be below 28, religious, well mannered, Urdu speaking family from Tamil Nadu, with professional qualification working in UAE and from religious, rich/affluent family. Bride's photo will only be shared if we like the groom.",
+        familyDetail:"Seek suitable alliance for my good looking daughter. Born and brought up in UAE. Studying final year Architect in UAE. We're religious, follow sunnah, hijab and rich/affluent family. Groom age should be below 28, religious, well mannered, Urdu speaking family",
+        data:[
+          { detail: ['21 yrs Old', 'Never Married', 'Urdu', '5`6', 'Pakistan'] },
+          { detail: ['lahore', 'IT Profession', 'Muslim', 'Jutt', 'Bachelors in CS'] }
+        ],
+        filters:[
+          {filterName:'cast' , filterValue:'sheikh' },
+          {filterName:'martialStatus' , filterValue:'never married' },
+          {filterName:'educationLevel' , filterValue:'graduate' },
+          {filterName:'city' , filterValue:'Lahore' },
+          {filterName:'country' , filterValue:'Pakistan' },
+          {filterName:'height' , filterValue: '5`60 to 6`1' },
+          {filterName:'religion' , filterValue:'islam' },
+          {filterName:'motherTongue' , filterValue:'urdu' },
+          {filterName:'profession' , filterValue:'It' },
+          {filterName:'income' , filterValue:'1232222222 to 1290382130' },
+        ],
       },
       {
         id: 1,
-        name: 'Name of Bride/groom',
+        name: 'Abdulrehman',
+        phone:"03007431729", 
+        gender:'male',
+        age:'25',
+        email:'tahirawais1123@gmail.com', 
         address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
+        cast: 'sheikh',
+        image:'assets/images/img_1.jpg',
+        description:"Seek suitable alliance for my good looking daughter. Born and brought up in UAE. Studying final year Architect in UAE. We're religious, follow sunnah, hijab and rich/affluent family. Groom age should be below 28, religious, well mannered, Urdu speaking family from Tamil Nadu, with professional qualification working in UAE and from religious, rich/affluent family. Bride's photo will only be shared if we like the groom.",
+        familyDetail:"Seek suitable alliance for my good looking daughter. Born and brought up in UAE. Studying final year Architect in UAE. We're religious, follow sunnah, hijab and rich/affluent family. Groom age should be below 28, religious, well mannered, Urdu speaking family",
+        data:[
+          { detail: ['21 yrs Old', 'Never Married', 'Urdu', '5`6', 'Pakistan'] },
+          { detail: ['lahore', 'IT Profession', 'Muslim', 'Jutt', 'Bachelors in CS'] }
+        ],
+        filters:[
+          {filterName:'cast' , filterValue:'sheikh' },
+          {filterName:'martialStatus' , filterValue:'never married' },
+          {filterName:'educationLevel' , filterValue:'graduate' },
+          {filterName:'city' , filterValue:'Lahore' },
+          {filterName:'country' , filterValue:'Pakistan' },
+          {filterName:'height' , filterValue: '5`60 to 6`1' },
+          {filterName:'religion' , filterValue:'islam' },
+          {filterName:'motherTongue' , filterValue:'urdu' },
+          {filterName:'profession' , filterValue:'It' },
+          {filterName:'income' , filterValue:'1232222222 to 1290382130' },
+        ],
       },
       {
         id: 2,
-        name: 'Name of Bride/groom',
+        name: 'Waseem',
+        phone:"03007431729", 
+        age:'25',
+        gender:'male',
+        email:'tahirawais1123@gmail.com', 
         address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
+        cast: 'sheikh',
+        image:'assets/images/img_1.jpg',
+        description:"Seek suitable alliance for my good looking daughter. Born and brought up in UAE. Studying final year Architect in UAE. We're religious, follow sunnah, hijab and rich/affluent family. Groom age should be below 28, religious, well mannered, Urdu speaking family from Tamil Nadu, with professional qualification working in UAE and from religious, rich/affluent family. Bride's photo will only be shared if we like the groom.",
+        familyDetail:"Seek suitable alliance for my good looking daughter. Born and brought up in UAE. Studying final year Architect in UAE. We're religious, follow sunnah, hijab and rich/affluent family. Groom age should be below 28, religious, well mannered, Urdu speaking family",
+        data:[
+          { detail: ['21 yrs Old', 'Never Married', 'Urdu', '5`6', 'Pakistan'] },
+          { detail: ['lahore', 'IT Profession', 'Muslim', 'Jutt', 'Bachelors in CS'] }
+        ],
+        filters:[
+          {filterName:'cast' , filterValue:'sheikh' },
+          {filterName:'martialStatus' , filterValue:'never married' },
+          {filterName:'educationLevel' , filterValue:'graduate' },
+          {filterName:'city' , filterValue:'Lahore' },
+          {filterName:'country' , filterValue:'Pakistan' },
+          {filterName:'height' , filterValue: '5`60 to 6`1' },
+          {filterName:'religion' , filterValue:'islam' },
+          {filterName:'motherTongue' , filterValue:'urdu' },
+          {filterName:'profession' , filterValue:'It' },
+          {filterName:'income' , filterValue:'1232222222 to 1290382130' },
+        ],
       },
       {
         id: 3,
-        name: 'Name of Bride/groom',
+        name: 'Rida',
+        phone:"03007431729", 
+        age:'25',
+        gender:'female',
+        featured:true,
+        email:'tahirawais1123@gmail.com', 
         address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 4,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 5,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 6,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 7,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 8,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 9,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 10,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 11,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 12,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 13,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 14,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 15,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 16,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 17,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 18,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
-      },
-      {
-        id: 19,
-        name: 'Name of Bride/groom',
-        address: 'Adress of bride or groom',
-        cast: 'Cast',
-        image:'assets/images/img_1.jpg'
+        cast: 'sheikh',
+        image:'assets/images/img_1.jpg',
+        description:"Seek suitable alliance for my good looking daughter. Born and brought up in UAE. Studying final year Architect in UAE. We're religious, follow sunnah, hijab and rich/affluent family. Groom age should be below 28, religious, well mannered, Urdu speaking family from Tamil Nadu, with professional qualification working in UAE and from religious, rich/affluent family. Bride's photo will only be shared if we like the groom.",
+        familyDetail:"Seek suitable alliance for my good looking daughter. Born and brought up in UAE. Studying final year Architect in UAE. We're religious, follow sunnah, hijab and rich/affluent family. Groom age should be below 28, religious, well mannered, Urdu speaking family",
+        data:[
+          { detail: ['21 yrs Old', 'Never Married', 'Urdu', '5`6', 'Pakistan'] },
+          { detail: ['lahore', 'IT Profession', 'Muslim', 'Jutt', 'Bachelors in CS'] }
+        ],
+        filters:[
+          {filterName:'cast' , filterValue:'sheikh' },
+          {filterName:'martialStatus' , filterValue:'never married' },
+          {filterName:'educationLevel' , filterValue:'graduate' },
+          {filterName:'city' , filterValue:'Lahore' },
+          {filterName:'country' , filterValue:'Pakistan' },
+          {filterName:'height' , filterValue: '5`60 to 6`1' },
+          {filterName:'religion' , filterValue:'islam' },
+          {filterName:'motherTongue' , filterValue:'urdu' },
+          {filterName:'profession' , filterValue:'It' },
+          {filterName:'income' , filterValue:'1232222222 to 1290382130' },
+        ],
       },
     ]
 
-
-
-
+  }
+  getProfileByTitle(id) {
+    return this.listinings.listItems[id];
   }
 
 
 }
+
+  
