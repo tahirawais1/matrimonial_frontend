@@ -116,8 +116,8 @@
 
       <div class="row mb-3 align-items-stretch">
 
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" (click)="routeToServices(item)" *ngFor="let item of list">
-          <div class="h-entry" *ngIf="item?.gender === 'male' && item?.featured">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4"  *ngFor="let item of list">
+          <div class="h-entry" (click)="routeToServices(item)"  *ngIf="item?.gender === 'male' && item?.featured">
             <img [src]="item.image" [alt]="item.image" class="img-fluid">
             <div class="h-entry-inner">
               <h2 class="font-size-regular"><a href="/profileDetail"> {{item.name}}</a></h2>
@@ -144,8 +144,8 @@
       </div>
       <div class="row mb-3 align-items-stretch">
 
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" (click)="routeToServices(item)" *ngFor="let item of list">
-          <div class="h-entry" *ngIf="item?.gender === 'female' && item?.featured">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4"  *ngFor="let item of list">
+          <div class="h-entry"  (click)="routeToServices(item)" *ngIf="item?.gender === 'female' && item?.featured">
             <img [src]="item.image" [alt]="item.image" class="img-fluid">
             <div class="h-entry-inner">
               <h2 class="font-size-regular"><a href="/profileDetail">{{item.name}}</a></h2>
@@ -162,7 +162,7 @@
 
 
 
-    <div class="pl-5 pt-5 site-footer bg-light">
+    <!-- <div class="pl-5 pt-5 site-footer bg-light">
       <h1 class="font-weight-light text-primary pb-5 text-center">Search By Popular Matchmaking Site</h1>
       <div class="row">
         <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
@@ -258,7 +258,7 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
 
     <div class="py-5 bg-primary">
       <div class="container">
