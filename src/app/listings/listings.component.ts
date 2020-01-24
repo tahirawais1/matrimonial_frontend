@@ -47,6 +47,19 @@ export class ListingsComponent implements OnInit {
         },
         {
           inputType: "dropdown",
+          placeholder: "Select Community",
+          multipleSelect:true,
+
+          option:
+            [
+              { value: 'ahle_sunnat', text: 'Ahl E Sunnat' },
+              { value: 'ahle_hadees', text: 'Ahl E Hadees' },
+              { value: 'shia', text: 'Shia' },
+            ],
+          formControlName: "community",
+        },
+        {
+          inputType: "dropdown",
           multipleSelect:true,
           placeholder: "Select Martial Status",
           option:
@@ -256,14 +269,22 @@ export class ListingsComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
-    this.list = this.dataService.listinings;
+    this.dataService.getListing().subscribe(data => {
+      this.list = data;
+    },(error) => {
+      console.log(error);
+    });
+    console.log(this.list);
 
+
+    
     this.filterGroup = this.formBuilder.group({
       gender: new FormControl(''),
       age: new FormControl(''),
       cast: new FormControl(''),
       martialStatus: new FormControl(''),
       educationLevel: new FormControl(''),
+      community: new FormControl(''),
       city: new FormControl(''),
       country: new FormControl(''),
       height: new FormControl(''),

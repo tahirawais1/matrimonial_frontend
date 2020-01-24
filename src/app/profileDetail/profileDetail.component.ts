@@ -18,7 +18,7 @@ export class ProfileDetailComponent implements OnInit {
   constructor(private dataService: DataService , private router: Router, private route: ActivatedRoute,) { }
 
   ngOnInit() {
-    this.detail = this.dataService.listinings.listItems;
+    this.detail = this.dataService.listinings;
 
     
     this.sub = this.route.queryParams

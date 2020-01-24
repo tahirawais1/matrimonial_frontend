@@ -58,11 +58,6 @@ export class SignupComponent implements OnInit {
           formControlName: "password",
         },
         {
-          inputType: "textField",
-          placeholder: "Confirm your Password",
-          formControlName: "confirmpassword",
-        },
-        {
           inputType: "dropdown",
           placeholder: "Profile Created By",
           option:
@@ -75,8 +70,6 @@ export class SignupComponent implements OnInit {
         },
       ]
     },
-
-
 
     {
       formTitle: "Personal Information",
@@ -135,40 +128,6 @@ export class SignupComponent implements OnInit {
             ],
           formControlName: "age",
         },
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         {
           inputType: "dropdown",
           placeholder: "Martial Status",
@@ -223,14 +182,41 @@ export class SignupComponent implements OnInit {
         },
 
         {
-          inputType: "textField",
-          placeholder: "Cast",
+          inputType: "dropdown",
+          placeholder: "Select Cast",
+          option:
+            [
+              { value: 'butt', text: 'Butt' },
+              { value: 'Jutt', text: 'Jutt' },
+              { value: 'mirza', text: 'Mirza' },
+              { value: 'mughal', text: 'Mughal' },
+              { value: 'rajpoot', text: 'Rajpoot' },
+            ],
           formControlName: "cast",
         },
+
         {
-          inputType: "textField",
-          placeholder: "Religion",
+          inputType: "dropdown",
+          placeholder: "Select Religion",
+          option:
+            [
+              { value: 'islam', text: 'Islam' },
+              { value: 'sikh', text: 'Sikh' },
+              { value: 'hindu', text: 'Hindu' },
+              { value: 'christian', text: 'Christian' },
+            ],
           formControlName: "religion",
+        },
+        {
+          inputType: "dropdown",
+          placeholder: "Select Comunity",
+          option:
+            [
+              { value: 'ahle_sunnat', text: 'Ahl E Sunnat' },
+              { value: 'ahle_hadees', text: 'Ahl E Hadees' },
+              { value: 'shia', text: 'Shia' },
+            ],
+          formControlName: "comunity",
         },
         {
           inputType: "dropdown",
@@ -340,8 +326,15 @@ export class SignupComponent implements OnInit {
           formControlName: "city",
         },
         {
-          inputType: "textField",
+          inputType: "dropdown",
           placeholder: "Country",
+          option:
+            [
+              { value: 'pakistan', text: 'Pakistan' },
+              { value: 'india', text: 'india' },
+              { value: 'england', text: 'England' },
+              { value: 'canada', text: 'Canada' },
+            ],
           formControlName: "country",
         },
 
@@ -359,27 +352,27 @@ export class SignupComponent implements OnInit {
     })
 
     this.signUpFormGroup = this.formBuilder.group({
-      phone: new FormControl('', [Validators.required]),
-      email: new FormControl(''),
-      password: new FormControl(''),
-      confirmpassword: new FormControl(''),
+      phone: new FormControl('',          ),
+      email: new FormControl('',          ),
+      password: new FormControl('',       ),
+      name: new FormControl('',           ),
       ProfileCreatedBy: new FormControl(''),
-      name: new FormControl(''),
-      gender: new FormControl(''),
-      age: new FormControl(''),
-      height: new FormControl(''),
-      cast: new FormControl(''),
-      religion: new FormControl(''),
-      martialStatus: new FormControl(''),
-      motherTongue: new FormControl(''),
-      educationLevel: new FormControl(''),
-      educationField: new FormControl(''),
-      profession: new FormControl(''),
-      company: new FormControl(''),
-      income: new FormControl(''),
-      address: new FormControl(''),
-      city: new FormControl(''),
-      country: new FormControl(''),
+      gender: new FormControl('',         ),
+      community: new FormControl('',      ),
+      age: new FormControl('',            ),
+      height: new FormControl('',         ),
+      cast: new FormControl('',           ),
+      religion: new FormControl('',       ),
+      martialStatus: new FormControl('',  ),
+      motherTongue: new FormControl('',   ),
+      educationLevel: new FormControl('', ),
+      educationField: new FormControl('', ),
+      profession: new FormControl('',     ),
+      company: new FormControl('',        ),
+      income: new FormControl('',         ),
+      address: new FormControl('',        ),
+      city: new FormControl('',           ),
+      country: new FormControl('',        ),
     })
   }
 

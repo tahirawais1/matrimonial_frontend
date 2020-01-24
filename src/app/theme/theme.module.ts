@@ -5,6 +5,7 @@ import { PageService } from './services/page.service';
 import { StarAnimationComponent } from './components/starAnimation/starAnimation.component';
 import { TextFieldComponent } from './components/textField/textField.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 //Angular Material Module
 import {MatInputModule} from '@angular/material/input';
@@ -29,7 +30,8 @@ import { MatNativeDateModule } from '@angular/material/core';
         CommonModule,
         AppRoutingModule,
         ReactiveFormsModule,
-        //Material Modules
+        HttpClientModule,
+        //Material Module
         MatInputModule,
         MatSelectModule,
         MatRadioModule,

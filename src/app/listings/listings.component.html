@@ -19,13 +19,14 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="d-block d-md-flex listing-horizontal" (click)="routeToServices(item)"
-            *ngFor="let item of list?.listItems">
+            *ngFor="let item of list">
             <a class="img d-block" [ngStyle]="{'background-image': 'url(' + item?.image + ')'}">
-              <span class="category">Profile created by {{item.ProfileCreatedBy}}</span>
+              <span class="category">Profile created by {{item.profileCreatedBy}}</span>
             </a>
             <div class="lh-content">
               <h3 class="linked">{{item.name}}</h3>
               <p>{{item.address}}</p>
+              <p>{{item.featured}}</p>
             </div>
           </div>
         </div>

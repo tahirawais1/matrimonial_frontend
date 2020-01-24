@@ -57,7 +57,7 @@
         <mat-tab label="Detailed Profiles">
 
           <div class="heading">
-            About {{detail?.name}}
+            About {{detail.name}}
           </div>
           <div class="px-5">
             <p> {{detail?.description}} </p>
@@ -67,15 +67,15 @@
           </div>
           <div class="displayFlex marginxy13">
             <i class="material-icons">phone</i>
-            {{detail?.phone}}
+            {{detail.phone}}
           </div>
           <div class="displayFlex marginxy13">
             <i class="material-icons">email</i>
-            {{detail?.email}}
+            {{detail.email}}
           </div>
           <div class="displayFlex marginxy13">
             <i class="material-icons">location_city</i>
-            {{detail?.address}}
+            {{detail.address}}
           </div>
           <div class="heading">
             Family Background
@@ -95,10 +95,10 @@
 
           <div class="brderBtm marginx3" *ngFor="let item of detail.filters">
             <div class="subheading  ">
-             {{item?.filterName}}
+             {{item.filterName}}
             </div>
             <div class="subPar ">
-              {{item?.filterValue}}
+              {{item.filterValue}}
             </div>
           </div>
           
@@ -110,3 +110,4 @@
     </div>
   </div>
 </div>
+

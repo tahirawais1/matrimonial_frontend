@@ -15,7 +15,12 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router, private dataService: DataService , private pageService: PageService) { }
 
   ngOnInit() {
-    this.list = this.dataService.listinings.listItems;
+    this.dataService.getListing().subscribe(data => {
+      this.list = data;
+    },(error) => {
+      console.log(error);
+    });
+    console.log(this.list);
 
   }
 
