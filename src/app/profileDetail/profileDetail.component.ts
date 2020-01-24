@@ -12,21 +12,24 @@ export class ProfileDetailComponent implements OnInit {
 
   detail;
   sub: any;
-  items
   page;
+
 
   constructor(private dataService: DataService , private router: Router, private route: ActivatedRoute,) { }
 
   ngOnInit() {
-    this.detail = this.dataService.listinings;
-
-    
-    this.sub = this.route.queryParams
+     this.sub = this.route.queryParams
       .subscribe(params => {
         this.page = +params['page'] || 0;
-        this.detail = this.dataService.getProfileByTitle(this.page);
       });
-      debugger;
+
+      this.dataService.getOneList(this.page).subscribe(data => {
+        this.detail = data;
+        console.log(this.detail);
+      },(error) => {
+        console.log(error);
+      });
+
   }
   ngOnDestroy() {
     this.sub.unsubscribe();

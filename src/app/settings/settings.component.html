@@ -19,21 +19,22 @@
       <div class="col-md-4">
         <div class="imageBox text-center">
           <div class="display-flex">
-            <div class="roundImage imageclas" [ngStyle]="{'background-image': 'url(' + detail?.image + ')'}">
-
+            <div class="roundImage imageclas" [ngStyle]="{'background-image': 'url()'}">
+              Upload Image
             </div>
           </div>
           <div class="py-2">
+            Upload Image or Change
           </div>
         </div>
       </div>
       <div class="col-md-8">
         <div class="">
           <div class="heading brderBtm">
-            {{detail.name}}
+           alskdasdlkm
           </div>
           <div class="row p-20">
-            <div class="col-md-6" *ngFor="let item of detail.data">
+            <div class="col-md-6" *ngFor="let item of ['a', 'b' ]">
               <ul>
                 <li *ngFor="let myitems of item.detail">
                   {{myitems}}

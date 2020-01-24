@@ -18,7 +18,9 @@ export class DataService {
 
   getListing() {
     return this.httpClient.get("http://localhost:8000/api/getAllProfiles");
-
+  }
+  getOneList(id) {
+    return this.httpClient.get("http://localhost:8000/api/profile/"+ id );
   }
 
 
