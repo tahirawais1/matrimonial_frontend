@@ -1,12 +1,21 @@
-<div [formGroup]="rformgroup">
-  <mat-form-field >
-
+<div *ngIf="!multiple" [formGroup]="rformgroup">
+  <mat-form-field>
     <mat-label> {{placeholder}}</mat-label>
     <mat-select [formControlName]="rformcontrolname">
       <mat-option (selectionChange)="onSelectionChange(args)" *ngFor="let item of options" [value]="item.value">
         {{item.text}}
       </mat-option>
     </mat-select>
+  </mat-form-field>
+</div>
 
+<div *ngIf="multiple" [formGroup]="rformgroup">
+  <mat-form-field>
+    <mat-label> {{placeholder}}</mat-label>
+    <mat-select [formControlName]="rformcontrolname" multiple>
+      <mat-option (selectionChange)="onSelectionChange(args)" *ngFor="let item of options" [value]="item.value">
+        {{item.text}}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
 </div>

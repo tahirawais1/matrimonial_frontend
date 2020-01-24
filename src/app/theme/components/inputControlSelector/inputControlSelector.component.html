@@ -20,7 +20,7 @@
 
       <ng-container *ngIf="item.inputType=='dropdown'">
         <app-dropdown [rformgroup]="myFromGroup" [rformcontrolname]="item.formControlName"  
-        [options]="item.option" [placeholder]="item.placeholder" > </app-dropdown>
+        [options]="item.option" [multiple]='item.multipleSelect' [placeholder]="item.placeholder" > </app-dropdown>
       </ng-container>
 
       <ng-container *ngIf="item.inputType=='datePicker'">

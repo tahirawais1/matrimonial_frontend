@@ -18,12 +18,12 @@ export class DropdownComponent implements OnInit {
   @Input() rformcontrolname;
   @Input() placeholder;
   @Input() options: Option[] = [];
+  @Input() multiple = false;
   constructor() {
     //
   }
 
   ngOnInit() {
-
   }
 
   onSelectionChange(args) {

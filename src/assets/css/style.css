@@ -1594,7 +1594,7 @@ h1, h2, h3, h4, h5,
       border-radius: 30px;
       color: #fff;
       letter-spacing: .2em;
-      text-transform: uppercase; }
+    }
     .listing-item .listing-item-content h2 {
       font-size: 22px; }
       .listing-item .listing-item-content h2, .listing-item .listing-item-content h2 a {
@@ -1672,7 +1672,7 @@ h1, h2, h3, h4, h5,
       border-radius: 30px;
       color: #fff;
       letter-spacing: .2em;
-      text-transform: uppercase; }
+}
   .listing-horizontal .lh-content {
     padding: 30px;
     position: relative;
