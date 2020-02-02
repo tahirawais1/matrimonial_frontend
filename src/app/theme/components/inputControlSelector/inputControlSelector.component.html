@@ -2,7 +2,7 @@
   <div>
 
 
-    <app-formTitle [title]="form.formTitle"></app-formTitle>
+    <app-formTitle *ngFor="let item of form.formTitle" [title]="form.formTitle"></app-formTitle>
 
     <ng-container *ngFor="let item of form.formFields">
 

@@ -6,41 +6,7 @@
       <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
-            <h1>Profile</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="site-section">
-  <div class="container">
-    <div class="row mainDiv">
-      <div class="col-md-4">
-        <div class="imageBox text-center">
-          <div class="display-flex">
-            <div class="roundImage imageclas" [ngStyle]="{'background-image': 'url()'}">
-              Upload Image
-            </div>
-          </div>
-          <div class="py-2">
-            Upload Image or Change
-          </div>
-        </div>
-      </div>
-      <div class="col-md-8">
-        <div class="">
-          <div class="heading brderBtm">
-           alskdasdlkm
-          </div>
-          <div class="row p-20">
-            <div class="col-md-6" *ngFor="let item of ['a', 'b' ]">
-              <ul>
-                <li *ngFor="let myitems of item.detail">
-                  {{myitems}}
-                </li>
-              </ul>
-            </div>
+            <h1>My Profile</h1>
           </div>
         </div>
       </div>
@@ -48,6 +14,247 @@
   </div>
 </div>
 
+<div class="site-section">
+
+  <div class="container">
+
+    <div class="row mainDiv">
+
+      <div class="col-md-4">
+        <div class="imageBox text-center">
+          <div class="display-flex">
+            <div class="roundImage imageclas">
+
+              <div *ngIf="!edit">
+                <img [src]="detail?.image" [alt]="detail?.image" class="img-fluid">
+              </div>
+
+              <div *ngIf="edit">
+                <input type="file" (change)="onFileChanged($event)">
+              </div>
+
+            </div>
+          </div>
+          <div class="py-2">
+            {{detail?.name}}
+          </div>
+        </div>
+        <div class="pxy btn" (click)="edit=!edit">
+          <div *ngIf="!edit">
+            Edit your Profile
+          </div>
+          <div *ngIf="edit">
+            Cancel Editing
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <mat-tab-group>
+          <mat-tab label="Manage Profile">
+            <div>
+              <div class="heading ">
+                Manage your Profile
+              </div>
+              <div *ngIf="edit" class="deleteBtn" (click)="onDelete()">
+                Delete your Profile
+              </div>
+
+              <div *ngIf="!edit" class="row p-20">
+                <div class="col-md-6">
+                  <ul>
+                    <li>
+                      {{detail?.age}} years
+                    </li>
+                    <li>
+                      {{detail?.cast}}
+                    </li>
+                    <li>
+                      {{detail?.height}}
+                    </li>
+                    <li>
+                      {{detail?.community}}
+                    </li>
+                    <li>
+                      {{detail?.religion}}
+                    </li>
+                    <li>
+                      {{detail?.martial_status}}
+                    </li>
+
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul>
+                    <li>
+                      {{detail?.mother_tongue}}
+                    </li>
+                    <li>
+                      {{detail?.educationField}}
+                    </li>
+                    <li>
+                      {{detail?.educationLevel}}
+                    </li>
+                    <li>
+                      {{detail?.profession}}
+                    </li>
+                    <li>
+                      {{detail?.income}} /month
+                    </li>
+                    <li>
+                      {{detail?.city}}
+                    </li>
+                    <li>
+                      {{detail?.country}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div *ngIf="edit" class="row p-20">
+                <div class="col-md-6">
+                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="updateprofileF">
+                  </app-inputControlSelector>
+                </div>
+                <div class="col-md-6">
+                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="updateprofileS">
+                  </app-inputControlSelector>
+                </div>
+                <input type="submit" value="Save Changes" (click)="onvalueUpdate()"
+                  class="btn mxy btn-primary btn-md text-white">
+              </div>
+            </div>
+            <div class="display-flex justifyCont">
+
+            </div>
+          </mat-tab>
+
+          <mat-tab label="Partner Preference">
+            <div class="heading ">
+              What are you looking for
+            </div>
+            <div *ngIf="!edit" class="row p-20">
+              <div class="col-md-6">
+                <ul>
+                  <li>
+                    {{detail?.pref_Age}} years
+                  </li>
+                  <li>
+                    {{detail?.pref_Cast}}
+                  </li>
+                  <li>
+                    {{detail?.pref_height}}
+                  </li>
+                  <li>
+                    {{detail?.pref_community}}
+                  </li>
+                  <li>
+                    {{detail?.pref_religion}}
+                  </li>
+                  <li>
+                    {{detail?.pref_martialStatus}}
+                  </li>
+
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li>
+                    {{detail?.pref_motherTongue}}
+                  </li>
+                  <li>
+                    {{detail?.pref_educationField}}
+                  </li>
+                  <li>
+                    {{detail?.pref_educationLevel}}
+                  </li>
+                  <li>
+                    {{detail?.pref_profession}}
+                  </li>
+                  <li>
+                    {{detail?.pref_income}} /month
+                  </li>
+                  <li>
+                    {{detail?.pref_city}}
+                  </li>
+                  <li>
+                    {{detail?.pref_country}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div *ngIf="edit" class="row p-20">
+              <div class="col-md-6">
+                <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="updateprofilePrefF">
+                </app-inputControlSelector>
+              </div>
+              <div class="col-md-6">
+                <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="updateprofilePrefS">
+                </app-inputControlSelector>
+              </div>
+              <input type="submit" value="Save Preference Changes" (click)="onvalueUpdate()"
+                class="btn mxy2 btn-primary btn-md text-white">
+            </div>
+          </mat-tab>
+
+          <mat-tab label="Account Settings">
+            <div class="heading ">
+              Change your Account Settings
+            </div>
+
+            <div>
+              <ul>
+                <li (click)="editpassword=!editpassword" *ngIf="!editpassword" class="linked">
+                  Change your Password
+                </li>
+                <li *ngIf="editpassword">
+                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changePassword">
+                  </app-inputControlSelector>
+                </li>
+
+
+
+                <li (click)="editphone=!editphone" *ngIf="!editphone" class="linked">
+                  Change your Phone Number
+                </li>
+                <li *ngIf="editphone">
+                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changePhone">
+                  </app-inputControlSelector>
+                </li>
+
+
+                <li (click)="editemail=!editemail" *ngIf="!editemail" class="linked">
+                  Change your Email
+                </li>
+                <li *ngIf="editemail">
+                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changeEmail">
+                  </app-inputControlSelector>
+                </li>
+                <li (click)="editaddress=!editaddress" *ngIf="!editaddress" class="linked">
+                  Change your Address
+                </li>
+                <li *ngIf="editaddress">
+                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changeAddress">
+                  </app-inputControlSelector>
+                </li>
+              </ul>
+            </div>
+
+            <div *ngIf="editaddress || editemail || editphone || editpassword">
+              <input type="submit" value="Save Changes" (click)="onvalueUpdate()"
+                class=" btn-primary btn-md text-white">
+
+            </div>
+
+
+          </mat-tab>
+        </mat-tab-group>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
 <div class="container">
   <div class="row">
     <div class="col-md-4">
@@ -96,13 +303,13 @@
 
           <div class="brderBtm marginx3" *ngFor="let item of detail.filters">
             <div class="subheading  ">
-             {{item.filterName}}
+              {{item.filterName}}
             </div>
             <div class="subPar ">
               {{item.filterValue}}
             </div>
           </div>
-          
+
 
         </mat-tab>
 
@@ -110,5 +317,4 @@
 
     </div>
   </div>
-</div>
-
+</div> -->

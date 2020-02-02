@@ -17,7 +17,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 
 
 //Theme Components
-import { HeaderComponent, FooterComponent,UpperFooterComponent, RadioBtnComponent, DatePickerComponent, TabsComponent} from '.';
+import { HeaderComponent, FooterComponent,UpperFooterComponent, RadioBtnComponent, DatePickerComponent, TabsComponent, ButtonComponent} from '.';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { InputControlSelectorComponent } from './components/inputControlSelector/inputControlSelector.component';
 import { FormTitleComponent } from './components/formTitle/formTitle.component';
@@ -51,7 +51,8 @@ import { MatNativeDateModule } from '@angular/material/core';
         DropdownComponent,
         InputControlSelectorComponent,
         FormTitleComponent,
-        TabsComponent
+        TabsComponent,
+        ButtonComponent
     ],
     exports: [
         FooterComponent,

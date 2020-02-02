@@ -20,7 +20,7 @@ export class ListingsComponent implements OnInit {
       formFields: [
         {
           inputType: "dropdown",
-          multipleSelect:true,
+          // multipleSelect:true,
           placeholder: "Select Profile",
           option:
             [
@@ -32,35 +32,35 @@ export class ListingsComponent implements OnInit {
         },
         {
           inputType: "dropdown",
-          multipleSelect:true,
+          // multipleSelect:true,
           placeholder: "Select Cast",
           option:
-            [
-            
-              { value: 'butt', text: 'Butt' },
-              { value: 'Jutt', text: 'Jutt' },
-              { value: 'mirza', text: 'Mirza' },
-              { value: 'mughal', text: 'Mughal' },
-              { value: 'rajpoot', text: 'Rajpoot' },
-            ],
+          [
+            { value: 'Butt', text: 'Butt' },
+            { value: 'Jutt', text: 'Jutt' },
+            { value: 'Mirza', text: 'Mirza' },
+            { value: 'Sheikh', text: 'Sheikh' },
+            { value: 'Mughal', text: 'Mughal' },
+            { value: 'Rajpoot', text: 'Rajpoot' },
+          ],
           formControlName: "cast",
         },
         {
           inputType: "dropdown",
           placeholder: "Select Community",
-          multipleSelect:true,
+          // multipleSelect:true,
 
           option:
             [
-              { value: 'ahle_sunnat', text: 'Ahl E Sunnat' },
-              { value: 'ahle_hadees', text: 'Ahl E Hadees' },
-              { value: 'shia', text: 'Shia' },
+              { value: 'Ahle Sunnat', text: 'Ahl E Sunnat' },
+              { value: 'Ahle Hadees', text: 'Ahl E Hadees' },
+              { value: 'Shia', text: 'Shia' },
             ],
           formControlName: "community",
         },
         {
           inputType: "dropdown",
-          multipleSelect:true,
+          // multipleSelect:true,
           placeholder: "Select Martial Status",
           option:
             [
@@ -71,11 +71,11 @@ export class ListingsComponent implements OnInit {
               { value: 'secondMariage', text: 'Second Marriage' },
 
             ],
-          formControlName: "martialStatus",
+          formControlName: "martial_status",
         },
         {
           inputType: "dropdown",
-          multipleSelect:true,
+          // multipleSelect:true,
           placeholder: "Select Education Level",
           option:
             [
@@ -90,7 +90,7 @@ export class ListingsComponent implements OnInit {
         },
         {
           inputType: "dropdown",
-          multipleSelect:true,
+          // multipleSelect:true,
           placeholder: "Age",
           option:
             [
@@ -137,7 +137,7 @@ export class ListingsComponent implements OnInit {
         },
         {
           inputType: "dropdown",
-          multipleSelect:true,
+          // multipleSelect:true,
           placeholder: "Select Country",
           option:
             [
@@ -151,8 +151,8 @@ export class ListingsComponent implements OnInit {
         },
         {
           inputType: "dropdown",
-          multipleSelect:true,
-          placeholder: "Height", //Range
+          // multipleSelect:true,
+          placeholder: "Height",
           option:
             [
               { value: '134', text: "4'5 - 134cm" },
@@ -192,7 +192,7 @@ export class ListingsComponent implements OnInit {
         },
         {
           inputType: "dropdown",
-          multipleSelect:true,
+          // multipleSelect:true,
           placeholder: "Select Religion",
           option:
             [
@@ -206,7 +206,7 @@ export class ListingsComponent implements OnInit {
         },
         {
           inputType: "dropdown",
-          multipleSelect:true,
+          // multipleSelect:true,
           placeholder: "Select Mother Tongue",
           option:
             [
@@ -218,11 +218,11 @@ export class ListingsComponent implements OnInit {
               { value: 'pashto', text: 'Pashto' },
               { value: 'saraiki', text: 'Saraiki' },
             ],
-          formControlName: "motherTongue",
+          formControlName: "mother_tongue",
         },
         {
           inputType: "dropdown",
-          multipleSelect:true,
+          // multipleSelect:true,
           placeholder: "Select Profession",
           option:
             [
@@ -235,7 +235,7 @@ export class ListingsComponent implements OnInit {
         },
         {
           inputType: "dropdown",
-          multipleSelect:true,
+          // multipleSelect:true,
           placeholder: "Select Income",
           option:
             [
@@ -282,22 +282,25 @@ export class ListingsComponent implements OnInit {
       gender: new FormControl(''),
       age: new FormControl(''),
       cast: new FormControl(''),
-      martialStatus: new FormControl(''),
+      martial_status: new FormControl(''),
       educationLevel: new FormControl(''),
       community: new FormControl(''),
       city: new FormControl(''),
       country: new FormControl(''),
       height: new FormControl(''),
       religion: new FormControl(''),
-      motherTongue: new FormControl(''),
+      mother_tongue: new FormControl(''),
       profession: new FormControl(''),
       income: new FormControl(''),
     })
   }
 
   onSearch(){
-
     console.log(this.filterGroup.value)
+    this.dataService.searching(this.filterGroup.value).subscribe(res => {
+      console.dir(res);
+      this.list=res;
+    })
   }
 
 

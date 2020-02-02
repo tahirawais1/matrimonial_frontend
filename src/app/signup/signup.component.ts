@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../theme/services/data.service';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { PageService } from '../theme/services/page.service';
 
 @Component({
   selector: 'app-signup',
@@ -14,12 +17,12 @@ export class SignupComponent implements OnInit {
 
   formData = [
     {
-      formTitle: "Login",
+      // formTitle: "Login",
       formFields: [
         {
           inputType: "textField",
-          placeholder: "username",
-          formControlName: "username",
+          placeholder: "Email",
+          formControlName: "email",
         },
         {
           inputType: "textField",
@@ -31,13 +34,10 @@ export class SignupComponent implements OnInit {
   ];
 
 
-
-
-
   signupData = [
 
     {
-      formTitle: "Account Information",
+      // formTitle: "Account Information",
 
       formFields: [
 
@@ -62,17 +62,17 @@ export class SignupComponent implements OnInit {
           placeholder: "Profile Created By",
           option:
             [
-              { value: 'parents', text: 'Parents   ' },
-              { value: 'siblings', text: 'Siblings   ' },
-              { value: 'relative', text: 'Relative   ' },
+              { value: 'Parents', text: 'Parents   ' },
+              { value: 'Siblings', text: 'Siblings   ' },
+              { value: 'Relative', text: 'Relative   ' },
             ],
-          formControlName: "martialStatus",
+          formControlName: "profileCreatedBy",
         },
       ]
     },
 
     {
-      formTitle: "Personal Information",
+      // formTitle: "Personal Information",
 
       formFields: [
         {
@@ -133,12 +133,12 @@ export class SignupComponent implements OnInit {
           placeholder: "Martial Status",
           option:
             [
-              { value: 'neverMarried', text: 'Never Married' },
-              { value: 'divorced', text: 'Divorced' },
-              { value: 'widowed', text: 'Widowed' },
-              { value: 'secondMariage', text: 'Second Marriage' },
+              { value: 'Never Married', text: 'Never Married' },
+              { value: 'Divorced', text: 'Divorced' },
+              { value: 'Widowed', text: 'Widowed' },
+              { value: 'Second Mariage', text: 'Second Marriage' },
             ],
-          formControlName: "martialStatus",
+          formControlName: "martial_status",
         },
         {
           inputType: "dropdown",
@@ -186,11 +186,12 @@ export class SignupComponent implements OnInit {
           placeholder: "Select Cast",
           option:
             [
-              { value: 'butt', text: 'Butt' },
+              { value: 'Butt', text: 'Butt' },
               { value: 'Jutt', text: 'Jutt' },
-              { value: 'mirza', text: 'Mirza' },
-              { value: 'mughal', text: 'Mughal' },
-              { value: 'rajpoot', text: 'Rajpoot' },
+              { value: 'Mirza', text: 'Mirza' },
+              { value: 'Sheikh', text: 'Sheikh' },
+              { value: 'Mughal', text: 'Mughal' },
+              { value: 'Rajpoot', text: 'Rajpoot' },
             ],
           formControlName: "cast",
         },
@@ -212,32 +213,32 @@ export class SignupComponent implements OnInit {
           placeholder: "Select Comunity",
           option:
             [
-              { value: 'ahle_sunnat', text: 'Ahl E Sunnat' },
-              { value: 'ahle_hadees', text: 'Ahl E Hadees' },
-              { value: 'shia', text: 'Shia' },
+              { value: 'Ahle Sunnat', text: 'Ahl E Sunnat' },
+              { value: 'Ahle Hadees', text: 'Ahl E Hadees' },
+              { value: 'Shia', text: 'Shia' },
             ],
-          formControlName: "comunity",
+          formControlName: "community",
         },
         {
           inputType: "dropdown",
           placeholder: "Mother Tongue",
           option:
             [
-              { value: 'english', text: 'English' },
-              { value: 'urdu', text: 'Urdu' },
-              { value: 'punjabi', text: 'Punjabi' },
-              { value: 'sindhi', text: 'Sindhi' },
-              { value: 'pashto', text: 'Pashto' },
-              { value: 'saraiki', text: 'Saraiki' },
+              { value: 'English', text: 'English' },
+              { value: 'Urdu', text: 'Urdu' },
+              { value: 'Punjabi', text: 'Punjabi' },
+              { value: 'Sindhi', text: 'Sindhi' },
+              { value: 'Pashto', text: 'Pashto' },
+              { value: 'Saraiki', text: 'Saraiki' },
             ],
-          formControlName: "motherTongue",
+          formControlName: "mother_tongue",
         },
 
       ]
     },
 
     {
-      formTitle: "Education",
+      // formTitle: "Education",
 
       formFields: [
         {
@@ -261,7 +262,7 @@ export class SignupComponent implements OnInit {
       ]
     },
     {
-      formTitle: "Profession",
+      // formTitle: "Profession",
 
       formFields: [
         {
@@ -269,50 +270,38 @@ export class SignupComponent implements OnInit {
           placeholder: "Profession",
           formControlName: "profession",
         },
-        {
-          inputType: "dropdown",
-          placeholder: "Company Type",
-          option:
-            [
-              { value: 'government', text: 'Government' },
-              { value: 'semi_government', text: 'Semi Government' },
-              { value: 'private', text: 'Private' },
-              { value: 'self', text: 'Self' },
-              { value: 'international_firm', text: 'International Firm' },
-            ],
-          formControlName: "company",
-        },
+
 
         {
           inputType: "dropdown",
           placeholder: "Mothly Income",
           option:
             [
-              { value: '20000',   text: 'Less than 25000 PKR' },
-              { value: '30000',   text: '30,000 PKR' },
-              { value: '40000',   text: '40,000 PKR' },
-              { value: '50000',   text: '50,000 PKR' },
-              { value: '60000',   text: '60,000 PKR' },
-              { value: '70000',   text: '70,000 PKR' },
-              { value: '100000',  text: '100,000 PKR' },
-              { value: '200000',  text: '200,000 PKR' },
-              { value: '300000',  text: '300,000 PKR' },
-              { value: '400000',  text: '400,000 PKR' },
-              { value: '500000',  text: '500,000 PKR' },
-              { value: '600000',  text: '600,000 PKR' },
-              { value: '700000',  text: '700,000 PKR' },
-              { value: '800000',  text: '800,000 PKR' },
-              { value: '900000',  text: '900,000 PKR' },
+              { value: '20000', text: 'Less than 25000 PKR' },
+              { value: '30000', text: '30,000 PKR' },
+              { value: '40000', text: '40,000 PKR' },
+              { value: '50000', text: '50,000 PKR' },
+              { value: '60000', text: '60,000 PKR' },
+              { value: '70000', text: '70,000 PKR' },
+              { value: '100000', text: '100,000 PKR' },
+              { value: '200000', text: '200,000 PKR' },
+              { value: '300000', text: '300,000 PKR' },
+              { value: '400000', text: '400,000 PKR' },
+              { value: '500000', text: '500,000 PKR' },
+              { value: '600000', text: '600,000 PKR' },
+              { value: '700000', text: '700,000 PKR' },
+              { value: '800000', text: '800,000 PKR' },
+              { value: '900000', text: '900,000 PKR' },
               { value: '1000000', text: '1000,000 PKR' },
               { value: '1100000', text: 'Above than 1000,000 PKR' },
             ],
-            
+
           formControlName: "income",
         },
       ]
     },
     {
-      formTitle: "Address",
+      // formTitle: "Address",
 
       formFields: [
         {
@@ -343,45 +332,63 @@ export class SignupComponent implements OnInit {
   ];
 
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private pageService: PageService, private dataService: DataService, private router: Router, private route: ActivatedRoute, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.loginFormGroup = this.formBuilder.group({
-      username: new FormControl(''),
-      password: new FormControl(''),
+      email: new FormControl('tahir@gmail.com'),
+      password: new FormControl('abc123'),
     })
 
     this.signUpFormGroup = this.formBuilder.group({
-      phone: new FormControl('',          ),
-      email: new FormControl('',          ),
-      password: new FormControl('',       ),
-      name: new FormControl('',           ),
-      ProfileCreatedBy: new FormControl(''),
-      gender: new FormControl('',         ),
-      community: new FormControl('',      ),
-      age: new FormControl('',            ),
-      height: new FormControl('',         ),
-      cast: new FormControl('',           ),
-      religion: new FormControl('',       ),
-      martialStatus: new FormControl('',  ),
-      motherTongue: new FormControl('',   ),
-      educationLevel: new FormControl('', ),
-      educationField: new FormControl('', ),
-      profession: new FormControl('',     ),
-      company: new FormControl('',        ),
-      income: new FormControl('',         ),
-      address: new FormControl('',        ),
-      city: new FormControl('',           ),
-      country: new FormControl('',        ),
+      email: new FormControl(''),
+      password: new FormControl(''),
+      phone: new FormControl(''),
+      name: new FormControl(''),
+      featured: new FormControl(''),
+      gender: new FormControl(''),
+      cast: new FormControl(''),
+      image: new FormControl(''),
+      city: new FormControl(''),
+      country: new FormControl(''),
+      address: new FormControl(''),
+      religion: new FormControl(''),
+      community: new FormControl(''),
+      mother_tongue: new FormControl(''),
+      martial_status: new FormControl(''),
+      height: new FormControl(''),
+      educationLevel: new FormControl(''),
+      educationField: new FormControl(''),
+      profession: new FormControl(''),
+      income: new FormControl(''),
+      profileCreatedBy: new FormControl(''),
+      age: new FormControl(''),
     })
   }
 
+  idofLogin;
+
   onLogin() {
-    console.log(this.loginFormGroup.value)
+    this.dataService.login(this.loginFormGroup.value).subscribe(res => {
+
+      this.idofLogin = res;
+      console.log(this.idofLogin)
+
+    }, error => {
+      console.dir(error);
+    });
+
   }
 
+
   onSignup() {
-      console.log(this.loginFormGroup.value)
-      
+
+    this.dataService.signupAPI(this.signUpFormGroup.value).subscribe(res => {
+      console.dir(res);
+    }, (error) => {
+      console.log(error);
+    });
   }
+
 }
+
