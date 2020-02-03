@@ -369,25 +369,27 @@ export class SignupComponent implements OnInit {
   idofLogin;
 
   onLogin() {
-    this.dataService.login(this.loginFormGroup.value).subscribe(res => {
-
-      this.idofLogin = res;
-      console.log(this.idofLogin)
-
+    this.dataService.login(this.loginFormGroup.value).subscribe((res): any => {
+      this.idofLogin = res[0].id;
+      if (res && res[0] && res[0].id) {
+        this.router.navigate(['/settings'], { queryParams: { page: this.idofLogin } });
+        window.scrollTo(0, 0);
+      }
     }, error => {
       console.dir(error);
     });
 
   }
 
-
   onSignup() {
-
-    this.dataService.signupAPI(this.signUpFormGroup.value).subscribe(res => {
-      console.dir(res);
-    }, (error) => {
-      console.log(error);
+    this.dataService.signupAPI(this.signUpFormGroup.value).subscribe((res): any => {
+      console.log(res)
+        this.router.navigate(['/settings'], { queryParams: { page: res } });
+        window.scrollTo(0, 0);
+    }, error => {
+      console.dir(error);
     });
+    
   }
 
 }

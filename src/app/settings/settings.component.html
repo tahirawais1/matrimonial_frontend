@@ -50,7 +50,85 @@
       </div>
       <div class="col-md-8">
         <mat-tab-group>
-          <mat-tab label="Manage Profile">
+          <mat-tab label="Details">
+            <div *ngIf="!edit">
+              <div class="liClass">
+                <span class="headingclas">
+                  Detail:
+                </span>
+                {{detail?.description}}
+              </div>
+              <div class="liClass">
+                <span class="headingclas">
+                  Family Detail:
+                </span>
+                {{detail?.familyDetail}}
+              </div>
+            </div>
+            <div *ngIf="edit" class="p-20">
+              <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="descript">
+              </app-inputControlSelector>
+              <div>
+                <input type="submit" value="Save Changes" (click)="onvalueUpdate()"
+                  class=" btn-primary btn-md text-white">
+
+              </div>
+            </div>
+
+
+          </mat-tab>
+          <mat-tab label="Account Settings">
+            <div class="heading ">
+              Change your Account Settings
+            </div>
+
+            <div>
+              <ul>
+                <li (click)="editpassword=!editpassword" *ngIf="!editpassword" class="linked">
+                  Change your Password
+                </li>
+                <li *ngIf="editpassword">
+                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changePassword">
+                  </app-inputControlSelector>
+                </li>
+
+
+
+                <li (click)="editphone=!editphone" *ngIf="!editphone" class="linked">
+                  Change your Phone Number
+                </li>
+                <li *ngIf="editphone">
+                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changePhone">
+                  </app-inputControlSelector>
+                </li>
+
+
+                <li (click)="editemail=!editemail" *ngIf="!editemail" class="linked">
+                  Change your Email
+                </li>
+                <li *ngIf="editemail">
+                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changeEmail">
+                  </app-inputControlSelector>
+                </li>
+                <li (click)="editaddress=!editaddress" *ngIf="!editaddress" class="linked">
+                  Change your Address
+                </li>
+                <li *ngIf="editaddress">
+                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changeAddress">
+                  </app-inputControlSelector>
+                </li>
+              </ul>
+            </div>
+
+            <div *ngIf="editaddress || editemail || editphone || editpassword">
+              <input type="submit" value="Save Changes" (click)="onvalueUpdate()"
+                class=" btn-primary btn-md text-white">
+
+            </div>
+
+
+          </mat-tab>
+          <mat-tab label="Edit Profile">
             <div>
               <div class="heading ">
                 Manage your Profile
@@ -63,22 +141,22 @@
                 <div class="col-md-6">
                   <ul>
                     <li>
-                      {{detail?.age}} years
+                     Age:  {{detail?.age}}
                     </li>
                     <li>
-                      {{detail?.cast}}
+                     Cast: {{detail?.cast}}
                     </li>
                     <li>
-                      {{detail?.height}}
+                     Height: {{detail?.height}}
                     </li>
                     <li>
-                      {{detail?.community}}
+                     Community: {{detail?.community}}
                     </li>
                     <li>
-                      {{detail?.religion}}
+                     Religion: {{detail?.religion}}
                     </li>
                     <li>
-                      {{detail?.martial_status}}
+                     Marital Status: {{detail?.martial_status}}
                     </li>
 
                   </ul>
@@ -86,25 +164,25 @@
                 <div class="col-md-6">
                   <ul>
                     <li>
-                      {{detail?.mother_tongue}}
+                     Mother Tongue: {{detail?.mother_tongue}}
                     </li>
                     <li>
-                      {{detail?.educationField}}
+                    Education Field:  {{detail?.educationField}}
                     </li>
                     <li>
-                      {{detail?.educationLevel}}
+                     Education Level: {{detail?.educationLevel}}
                     </li>
                     <li>
-                      {{detail?.profession}}
+                     Profession: {{detail?.profession}}
                     </li>
                     <li>
-                      {{detail?.income}} /month
+                    Income/month:  {{detail?.income}}
                     </li>
                     <li>
-                      {{detail?.city}}
+                     City:  {{detail?.city}}
                     </li>
                     <li>
-                      {{detail?.country}}
+                     Country: {{detail?.country}}
                     </li>
                   </ul>
                 </div>
@@ -127,7 +205,6 @@
 
             </div>
           </mat-tab>
-
           <mat-tab label="Partner Preference">
             <div class="heading ">
               What are you looking for
@@ -196,57 +273,9 @@
             </div>
           </mat-tab>
 
-          <mat-tab label="Account Settings">
-            <div class="heading ">
-              Change your Account Settings
-            </div>
-
-            <div>
-              <ul>
-                <li (click)="editpassword=!editpassword" *ngIf="!editpassword" class="linked">
-                  Change your Password
-                </li>
-                <li *ngIf="editpassword">
-                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changePassword">
-                  </app-inputControlSelector>
-                </li>
 
 
 
-                <li (click)="editphone=!editphone" *ngIf="!editphone" class="linked">
-                  Change your Phone Number
-                </li>
-                <li *ngIf="editphone">
-                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changePhone">
-                  </app-inputControlSelector>
-                </li>
-
-
-                <li (click)="editemail=!editemail" *ngIf="!editemail" class="linked">
-                  Change your Email
-                </li>
-                <li *ngIf="editemail">
-                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changeEmail">
-                  </app-inputControlSelector>
-                </li>
-                <li (click)="editaddress=!editaddress" *ngIf="!editaddress" class="linked">
-                  Change your Address
-                </li>
-                <li *ngIf="editaddress">
-                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changeAddress">
-                  </app-inputControlSelector>
-                </li>
-              </ul>
-            </div>
-
-            <div *ngIf="editaddress || editemail || editphone || editpassword">
-              <input type="submit" value="Save Changes" (click)="onvalueUpdate()"
-                class=" btn-primary btn-md text-white">
-
-            </div>
-
-
-          </mat-tab>
         </mat-tab-group>
 
       </div>

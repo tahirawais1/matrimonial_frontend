@@ -104,8 +104,37 @@
     </div>
   </div>
 
+<div class="site-section" data-aos="fade">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center border-primary">
+          <h2 class="font-weight-light text-primary">Featured Profiles</h2>
+          <p class="color-black-opacity-5">Shaadi is a very important decision in one's life. Getting a good rishta is
+            everyone's dream. Matrimonial and shadi online services are for the people who are truly interested in
+            marriage and are serious to get married</p>
+        </div>
+      </div>
 
-  <div class="site-section">
+      <div class="row">
+
+        <div class="col-md-6 mb-4 mb-lg-4 col-lg-4" (click)="routeToServices(item)" *ngFor="let item of list">
+          <div class="listing-item"  *ngIf="item?.featured">
+            <div class="listing-image">
+              <img [src]="item.image" [alt]="item.image" class="imageclas">
+            </div>
+            <div class="listing-item-content">
+              <a class="px-3 mb-3 category" (click)="redirectTo('/profileDetail')" >View profile</a>
+              <h2 class="mb-1"><a>{{item.name}}</a></h2>
+              <span class="address">Cast: {{item.cast}}</span>
+              <span class="address px-5">Age: {{item.age}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="site-section">
     <div class="container">
       <div class="row justify-content-center mb-5">
         <div class="col-md-7 text-center border-primary">
@@ -157,7 +186,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
 
@@ -281,34 +310,7 @@
   </div>
 
 
-  <!-- <div class="site-section" data-aos="fade">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-7 text-center border-primary">
-          <h2 class="font-weight-light text-primary">Featured Profiles</h2>
-          <p class="color-black-opacity-5">Shaadi is a very important decision in one's life. Getting a good rishta is
-            everyone's dream. Matrimonial and shadi online services are for the people who are truly interested in
-            marriage and are serious to get married</p>
-        </div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-md-6 mb-4 mb-lg-4 col-lg-4" (click)="routeToServices(item)" *ngFor="let item of list?.featured">
-          <div class="listing-item">
-            <div class="listing-image">
-              <img [src]="item.image" [alt]="item.image" class="img-fluid">
-            </div>
-            <div class="listing-item-content">
-              <a class="px-3 mb-3 category" (click)="redirectTo('/profileDetail')" >View profile</a>
-              <h2 class="mb-1"><a>{{item.name}}</a></h2>
-              <span class="address">{{item.address}}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+  
 
 
 

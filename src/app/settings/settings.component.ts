@@ -516,21 +516,47 @@ export class SettingsComponent implements OnInit {
       ]
     }
   ];
+  descript = [
+    {
+      formFields: [
+        {
+          inputType: "textField",
+          placeholder: "Tell viewrs about yourself",
+          formControlName: "description",
+        },
+      ]
+    },
+    {
+      formFields: [
+        {
+          inputType: "textField",
+          placeholder: "Enter Your Family Details",
+          formControlName: "familyDetail",
+        },
+      ]
+    }
+  ];
 
 
   constructor(private formBuilder: FormBuilder, private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    //bind the login profile ID
-    this.dataService.getOneList(1).subscribe(data => {
+    this.sub = this.route.queryParams
+    .subscribe(params => {
+      this.page = +params['page']  ;
+    });
+    console.log(this.page)
+
+    this.dataService.getOneList(this.page).subscribe(data => {
       this.detail = data;
       console.log(this.detail);
-    }, (error) => {
+    },(error) => {
       console.log(error);
     });
+
     setTimeout(() => {
       this.updateProfileGroup = this.formBuilder.group({
-        id: new FormControl(1),
+        id: new FormControl(this.page),
         age: new FormControl(this.detail.age),
         cast: new FormControl(this.detail.cast),
         height: new FormControl(this.detail.height),
@@ -561,41 +587,25 @@ export class SettingsComponent implements OnInit {
         pref_motherTongue: new FormControl(this.detail.pref_motherTongue),
         pref_profession: new FormControl(this.detail.pref_profession),
         pref_income: new FormControl(this.detail.pref_income),
+        description: new FormControl(this.detail.description),
+        familyDetail: new FormControl(this.detail.familyDetail),
         image: new FormControl('https://icons-for-free.com/iconfiles/png/512/customer+information+personal+profile+user+icon-1320086045331670685.png'),
       })
-
-      // this.updateProfilePrefGroup = this.formBuilder.group({
-      //   pref_Cast: new FormControl(this.detail.pref_Cast),
-      //   pref_Age: new FormControl(this.detail.pref_Age),
-      //   pref_community: new FormControl(this.detail.pref_community),
-      //   pref_martialStatus: new FormControl(this.detail.pref_martialStatus),
-      //   pref_educationLevel: new FormControl(this.detail.pref_educationLevel),
-      //   pref_educationField: new FormControl(this.detail.pref_educationField),
-      //   pref_city: new FormControl(this.detail.pref_city),
-      //   pref_country: new FormControl(this.detail.pref_country),
-      //   pref_height: new FormControl(this.detail.pref_height),
-      //   pref_religion: new FormControl(this.detail.pref_religion),
-      //   pref_motherTongue: new FormControl(this.detail.pref_motherTongue),
-      //   pref_profession: new FormControl(this.detail.pref_profession),
-      //   pref_income: new FormControl(this.detail.pref_income),
-      // })
-    }, 600);
+    }, 700);
 
   }
 
   onvalueUpdate() {
-    //bind the login profile ID
     this.dataService.updateProfile(this.updateProfileGroup.value).subscribe(res => {
       console.dir(res);
-    }
-    )
+    })
     window.location.reload();
 
   }
 
   onDelete() {
     //bind the login profile ID
-    this.dataService.deleteMethod(1).subscribe(res => {
+    this.dataService.deleteMethod(this.page).subscribe(res => {
       window.location.reload();
       ///route to Home and expire settings links
     }

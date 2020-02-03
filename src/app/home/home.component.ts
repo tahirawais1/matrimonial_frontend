@@ -23,6 +23,9 @@ export class HomeComponent implements OnInit {
     console.log(this.list);
 
   }
+  redirectTo(url) {
+    this.pageService.changeRoute(url);
+  }
 
   routeToServices(item) {
     this.router.navigate(['/profileDetail'], { queryParams: { page: item.id } });
