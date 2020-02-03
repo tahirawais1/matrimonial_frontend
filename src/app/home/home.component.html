@@ -1,5 +1,41 @@
 <div class="site-wrap">
-  <app-header></app-header>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-xl-3">
+            <h1 class="mb-0 site-logo"><a (click)="redirectTo('/')" class="text-white h2 mb-0">Make Shadi</a></h1>
+          </div>
+          <div class="col-12 col-md-9 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active"><a (click)="redirectTo('/')"><span>Home</span></a></li>
+                <li><a (click)="redirectTo('/signup')"><span>Login</span></a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#"
+              class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
+          </div>
+
+        </div>
+
+      </div>
+    </header>
+  </div>
   <div class="site-blocks-cover overlay" style="background-image: url(assets/images/hero_1.jpg);" data-aos="fade"
     data-stellar-background-ratio="0.5">
     <div class="container">
@@ -58,7 +94,7 @@
   </div>
 
 
-  
+
   <div class="site-section">
     <div class="container">
       <div class="row justify-content-center mb-5">
@@ -104,7 +140,7 @@
     </div>
   </div>
 
-<div class="site-section" data-aos="fade">
+  <div class="site-section" data-aos="fade">
     <div class="container">
       <div class="row justify-content-center mb-5">
         <div class="col-md-7 text-center border-primary">
@@ -118,12 +154,12 @@
       <div class="row">
 
         <div class="col-md-6 mb-4 mb-lg-4 col-lg-4" (click)="routeToServices(item)" *ngFor="let item of list">
-          <div class="listing-item"  *ngIf="item?.featured">
+          <div class="listing-item" *ngIf="item?.featured">
             <div class="listing-image">
               <img [src]="item.image" [alt]="item.image" class="imageclas">
             </div>
             <div class="listing-item-content">
-              <a class="px-3 mb-3 category" (click)="redirectTo('/profileDetail')" >View profile</a>
+              <a class="px-3 mb-3 category" (click)="redirectTo('/profileDetail')">View profile</a>
               <h2 class="mb-1"><a>{{item.name}}</a></h2>
               <span class="address">Cast: {{item.cast}}</span>
               <span class="address px-5">Age: {{item.age}}</span>
@@ -191,7 +227,7 @@
 
 
 
-    <!-- <div class="pl-5 pt-5 site-footer bg-light">
+  <!-- <div class="pl-5 pt-5 site-footer bg-light">
       <h1 class="font-weight-light text-primary pb-5 text-center">Search By Popular Matchmaking Site</h1>
       <div class="row">
         <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
@@ -289,32 +325,32 @@
 
     </div> -->
 
-    <div class="py-5 bg-primary">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7 mr-auto mb-4 mb-lg-0">
-            <h2 class="mb-3 mt-0 text-white">Let's get started. Create your account</h2>
-            <p class="mb-0 text-white">Far far away, behind the word mountains, far from the countries Vokalia and
-              Consonantia, there live the blind texts.</p>
-          </div>
-          <div class="col-lg-4">
-            <p class="mb-0"><a href="signup.html"
-                class="btn btn-outline-white text-white btn-md px-5 font-weight-bold btn-md-block">Sign Up</a></p>
-          </div>
+  <div class="py-5 bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mr-auto mb-4 mb-lg-0">
+          <h2 class="mb-3 mt-0 text-white">Let's get started. Create your account</h2>
+          <p class="mb-0 text-white">Far far away, behind the word mountains, far from the countries Vokalia and
+            Consonantia, there live the blind texts.</p>
+        </div>
+        <div class="col-lg-4">
+          <p class="mb-0"><a href="signup.html"
+              class="btn btn-outline-white text-white btn-md px-5 font-weight-bold btn-md-block">Sign Up</a></p>
         </div>
       </div>
     </div>
-
-    <app-footer></app-footer>
-
   </div>
 
+  <app-footer></app-footer>
 
-  
+</div>
 
 
 
-  <!-- <div class="site-section">
+
+
+
+<!-- <div class="site-section">
     <div class="container">
       <div class="row justify-content-center mb-5">
         <div class="col-md-7 text-center border-primary">
@@ -341,7 +377,7 @@
   </div> -->
 
 
-  <!-- <div class="site-section">
+<!-- <div class="site-section">
     <div class="container">
       <div class="row justify-content-center mb-5">
         <div class="col-md-7 text-center border-primary">
@@ -371,7 +407,7 @@
 
 
 
-  <!-- <div class="site-section">
+<!-- <div class="site-section">
   <div class="container">
     <div class="row">
       <div class="col-md-6 mb-5">
@@ -441,7 +477,7 @@
 </div> -->
 
 
-  <!-- <div class="site-section bg-light">
+<!-- <div class="site-section bg-light">
   <div class="container">
 
     <div class="row justify-content-center mb-5">

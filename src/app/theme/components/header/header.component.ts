@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { NavigationEnd } from '@angular/router';
@@ -12,9 +12,9 @@ import { PageService } from '../../services/page.service';
 
 export class HeaderComponent implements OnInit {
   currentRoute = '';
-  tabs=[
-    {name:'Home' ,route:'' },
-    {name:'Sign Up' ,route:'signup', status:'active' },
+  @Input() tabs=[
+    {name:'Home' ,status:'active' },
+    {name:'Sign Up' ,route:'signup', status:'' },
     {name:'Listing' ,route:'listings',status:''  },
   ]
   isContactUs = true;

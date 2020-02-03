@@ -32,7 +32,6 @@ export class DataService {
   }
 
   login(body) {
-
     return this.httpClient.post("api/auth", body );
   }
 
@@ -40,9 +39,9 @@ export class DataService {
     return this.httpClient.delete("api/deletePro/", id);
   }
 
-  // imageUpload(id, body) {
-  //   return this.httpClient.post("api/uploadImage/" + id, body);
-  // }
+  imageUpload(body) {
+    return this.httpClient.post("api/imagePath", body);
+  }
 
 
   

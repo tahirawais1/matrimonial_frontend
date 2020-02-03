@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../theme/services/data.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { PageService } from '../theme/services/page.service';
 
 @Component({
   selector: 'app-settings',
@@ -25,39 +26,39 @@ export class SettingsComponent implements OnInit {
           placeholder: "Age",
           option:
             [
-              { value: '18', text: '18 years' },
-              { value: '19', text: '19 years' },
-              { value: '20', text: '20 years' },
-              { value: '21', text: '21 years' },
-              { value: '22', text: '22 years' },
-              { value: '23', text: '23 years' },
-              { value: '24', text: '24 years' },
-              { value: '25', text: '25 years' },
-              { value: '26', text: '26 years' },
-              { value: '27', text: '27 years' },
-              { value: '28', text: '28 years' },
-              { value: '29', text: '29 years' },
-              { value: '30', text: '30 years' },
-              { value: '31', text: '31 years' },
-              { value: '32', text: '32 years' },
-              { value: '33', text: '33 years' },
-              { value: '34', text: '34 years' },
-              { value: '35', text: '35 years' },
-              { value: '36', text: '36 years' },
-              { value: '37', text: '37 years' },
-              { value: '38', text: '38 years' },
-              { value: '39', text: '39 years' },
-              { value: '40', text: '40 years' },
-              { value: '41', text: '41 years' },
-              { value: '42', text: '42 years' },
-              { value: '43', text: '43 years' },
-              { value: '44', text: '44 years' },
-              { value: '45', text: '45 years' },
-              { value: '46', text: '46 years' },
-              { value: '47', text: '47 years' },
-              { value: '48', text: '48 years' },
-              { value: '49', text: '49 years' },
-              { value: '50', text: '50 years' },
+              { value: '18 years', text: '18 years' },
+              { value: '19 years', text: '19 years' },
+              { value: '20 years', text: '20 years' },
+              { value: '21 years', text: '21 years' },
+              { value: '22 years', text: '22 years' },
+              { value: '23 years', text: '23 years' },
+              { value: '24 years', text: '24 years' },
+              { value: '25 years', text: '25 years' },
+              { value: '26 years', text: '26 years' },
+              { value: '27 years', text: '27 years' },
+              { value: '28 years', text: '28 years' },
+              { value: '29 years', text: '29 years' },
+              { value: '30 years', text: '30 years' },
+              { value: '31 years', text: '31 years' },
+              { value: '32 years', text: '32 years' },
+              { value: '33 years', text: '33 years' },
+              { value: '34 years', text: '34 years' },
+              { value: '35 years', text: '35 years' },
+              { value: '36 years', text: '36 years' },
+              { value: '37 years', text: '37 years' },
+              { value: '38 years', text: '38 years' },
+              { value: '39 years', text: '39 years' },
+              { value: '40 years', text: '40 years' },
+              { value: '41 years', text: '41 years' },
+              { value: '42 years', text: '42 years' },
+              { value: '43 years', text: '43 years' },
+              { value: '44 years', text: '44 years' },
+              { value: '45 years', text: '45 years' },
+              { value: '46 years', text: '46 years' },
+              { value: '47 years', text: '47 years' },
+              { value: '48 years', text: '48 years' },
+              { value: '49 years', text: '49 years' },
+              { value: '50 years', text: '50 years' },
             ],
           formControlName: "age",
         },
@@ -66,11 +67,12 @@ export class SettingsComponent implements OnInit {
           placeholder: "Select Cast",
           option:
             [
-              { value: 'butt', text: 'Butt' },
+              { value: 'Butt', text: 'Butt' },
               { value: 'Jutt', text: 'Jutt' },
-              { value: 'mirza', text: 'Mirza' },
-              { value: 'mughal', text: 'Mughal' },
-              { value: 'rajpoot', text: 'Rajpoot' },
+              { value: 'Mirza', text: 'Mirza' },
+              { value: 'Mughal', text: 'Mughal' },
+              { value: 'Rajpoot', text: 'Rajpoot' },
+              { value: 'Sheikh', text: 'Sheikh' },
             ],
           formControlName: "cast",
         },
@@ -202,23 +204,23 @@ export class SettingsComponent implements OnInit {
           placeholder: "Mothly Income",
           option:
             [
-              { value: '20000', text: 'Less than 25000 PKR' },
-              { value: '30000', text: '30,000 PKR' },
-              { value: '40000', text: '40,000 PKR' },
-              { value: '50000', text: '50,000 PKR' },
-              { value: '60000', text: '60,000 PKR' },
-              { value: '70000', text: '70,000 PKR' },
-              { value: '100000', text: '100,000 PKR' },
-              { value: '200000', text: '200,000 PKR' },
-              { value: '300000', text: '300,000 PKR' },
-              { value: '400000', text: '400,000 PKR' },
-              { value: '500000', text: '500,000 PKR' },
-              { value: '600000', text: '600,000 PKR' },
-              { value: '700000', text: '700,000 PKR' },
-              { value: '800000', text: '800,000 PKR' },
-              { value: '900000', text: '900,000 PKR' },
-              { value: '1000000', text: '1000,000 PKR' },
-              { value: '1100000', text: 'Above than 1000,000 PKR' },
+              { value: 'Less than 25000 PKR', text:  'Less than 25000 PKR' },
+              { value: '30,000 PKR', text:  '30,000 PKR' },
+              { value: '40,000 PKR', text:  '40,000 PKR' },
+              { value: '50,000 PKR', text:  '50,000 PKR' },
+              { value: '60,000 PKR', text:  '60,000 PKR' },
+              { value: '70,000 PKR', text:  '70,000 PKR' },
+              { value: '100,000 PKR', text: '100,000 PKR' },
+              { value: '200,000 PKR', text: '200,000 PKR' },
+              { value: '300,000 PKR', text: '300,000 PKR' },
+              { value: '400,000 PKR', text: '400,000 PKR' },
+              { value: '500,000 PKR', text: '500,000 PKR' },
+              { value: '600,000 PKR', text: '600,000 PKR' },
+              { value: '700,000 PKR', text: '700,000 PKR' },
+              { value: '800,000 PKR', text: '800,000 PKR' },
+              { value: '900,000 PKR', text: '900,000 PKR' },
+              { value: '1000,000 PKR', text:'1000,000 PKR' },
+              { value: 'Above than 1000,000 PKR', text:'Above than 1000,000 PKR' },
             ],
           formControlName: "income",
         },
@@ -293,11 +295,12 @@ export class SettingsComponent implements OnInit {
           placeholder: "Select Cast",
           option:
             [
-              { value: 'butt', text: 'Butt' },
+              { value: 'Butt', text: 'Butt' },
               { value: 'Jutt', text: 'Jutt' },
-              { value: 'mirza', text: 'Mirza' },
-              { value: 'mughal', text: 'Mughal' },
-              { value: 'rajpoot', text: 'Rajpoot' },
+              { value: 'Mirza', text: 'Mirza' },
+              { value: 'Sheikh', text: 'Sheikh' },
+              { value: 'Mughal', text: 'Mughal' },
+              { value: 'Rajpoot', text: 'Rajpoot' },
             ],
           formControlName: "pref_Cast",
         },
@@ -538,7 +541,7 @@ export class SettingsComponent implements OnInit {
   ];
 
 
-  constructor(private formBuilder: FormBuilder, private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private pageService:PageService, private formBuilder: FormBuilder, private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.sub = this.route.queryParams
@@ -604,15 +607,31 @@ export class SettingsComponent implements OnInit {
   }
 
   onDelete() {
-    //bind the login profile ID
     this.dataService.deleteMethod(this.page).subscribe(res => {
       window.location.reload();
       ///route to Home and expire settings links
     }
     )
   }
-  onFileChanged(event) {
-    this.image = event.target.files[0]
-  }
+  selectedFile: Array < File > ;
 
+  redirectTo(url) {
+    this.pageService.changeRoute(url);
+  }
+  onFileChanged(event) {
+    this.selectedFile = event.target.files;
+    this.submit();
+  }
+  imageId;
+
+  submit(){
+    let formData = new FormData();
+    for (var i = 0; i < this.selectedFile.length; i++) {
+        formData.append("uploads[]", this.selectedFile[i], this.selectedFile[i].name);
+    }
+    this.dataService.imageUpload(formData).subscribe(res => {
+      this.imageId=res;
+    })
+  }
 }
+
