@@ -519,6 +519,17 @@ export class SettingsComponent implements OnInit {
       ]
     }
   ];
+  changename = [
+    {
+      formFields: [
+        {
+          inputType: "textField",
+          placeholder: "Edit your Name",
+          formControlName: "name",
+        },
+      ]
+    }
+  ];
   descript = [
     {
       formFields: [
@@ -561,6 +572,7 @@ export class SettingsComponent implements OnInit {
       this.updateProfileGroup = this.formBuilder.group({
         id: new FormControl(this.page),
         age: new FormControl(this.detail.age),
+        name: new FormControl(this.detail.name),
         cast: new FormControl(this.detail.cast),
         height: new FormControl(this.detail.height),
         community: new FormControl(this.detail.community),

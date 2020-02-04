@@ -39,7 +39,7 @@
       <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
-            <h1>My Profile</h1>
+            <h1>Welcome <br>{{detail?.name}} </h1>
           </div>
         </div>
       </div>
@@ -116,6 +116,13 @@
 
             <div>
               <ul>
+                <li (click)="editname=!editname" *ngIf="!editname" class="linked">
+                  Edit your Name
+                </li>
+                <li *ngIf="editname">
+                  <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changename">
+                  </app-inputControlSelector>
+                </li>
                 <li (click)="editpassword=!editpassword" *ngIf="!editpassword" class="linked">
                   Change your Password
                 </li>
@@ -123,8 +130,6 @@
                   <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changePassword">
                   </app-inputControlSelector>
                 </li>
-
-
 
                 <li (click)="editphone=!editphone" *ngIf="!editphone" class="linked">
                   Change your Phone Number
@@ -134,7 +139,6 @@
                   </app-inputControlSelector>
                 </li>
 
-
                 <li (click)="editemail=!editemail" *ngIf="!editemail" class="linked">
                   Change your Email
                 </li>
@@ -142,6 +146,7 @@
                   <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changeEmail">
                   </app-inputControlSelector>
                 </li>
+
                 <li (click)="editaddress=!editaddress" *ngIf="!editaddress" class="linked">
                   Change your Address
                 </li>
@@ -149,10 +154,12 @@
                   <app-inputControlSelector [myFromGroup]="updateProfileGroup" [generateForm]="changeAddress">
                   </app-inputControlSelector>
                 </li>
+
+               
               </ul>
             </div>
 
-            <div *ngIf="editaddress || editemail || editphone || editpassword">
+            <div *ngIf="editaddress || editname || editemail || editphone || editpassword">
               <input type="submit" value="Save Changes" (click)="onvalueUpdate()"
                 class=" btn-primary btn-md text-white">
 
