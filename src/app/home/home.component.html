@@ -200,7 +200,7 @@
         <div class="col-md-6 mb-4 mb-lg-4 col-lg-4" (click)="routeToServices(item)" *ngFor="let item of list">
           <div class="listing-item" *ngIf="item?.featured==true">
             <div class="listing-image">
-              <img src="assets/images/profileIcon.png" alt="makeshadi.com Best marriage bureau" class="imageclas">
+              <img *ngIf="detail?.image" [src]="item?.image" alt="makeshadi.com Best marriage bureau" class="imageclas">
             </div>
             <div class="listing-item-content">
               <a class="px-3 mb-3 category" (click)="redirectTo('/profileDetail')">View profile</a>

@@ -75,7 +75,7 @@
             <div class="roundImage">
 
               <div *ngIf="!edit">
-                <img [src]="detail?.image" [alt]="detail?.image" class="img-fluid">
+                <img *ngIf="detail?.image" [src]="detail?.image" [alt]="detail?.image" class="img-fluid">
               </div>
 
               <div *ngIf="edit">
@@ -126,7 +126,7 @@
 
 
           </mat-tab>
-          <!-- <mat-tab label="Account Settings">
+           <mat-tab label="Account Settings">
             <div class="heading ">
               Change your Account Settings
             </div>
@@ -327,10 +327,7 @@
               <input type="submit" value="Save Preference Changes" (click)="onvalueUpdate()"
                 class="btn mxy2 btn-primary btn-md text-white">
             </div>
-          </mat-tab> -->
-
-
-
+          </mat-tab>
 
         </mat-tab-group>
 

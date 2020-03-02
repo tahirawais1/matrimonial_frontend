@@ -20,7 +20,7 @@ export class SettingsComponent implements OnInit {
   changeAccountPrefGroup;
   updateProfilePrefGroup;
   updateProfileGroup
-  detail;
+  detail:any; 
   sub;
   page;
   image;
@@ -891,7 +891,6 @@ export class SettingsComponent implements OnInit {
 
 
     setTimeout(() => {
-      
       this.updateProfileGroup = this.formBuilder.group({
         id: new FormControl(this.page),
         age: new FormControl(this.detail.age),
@@ -927,14 +926,13 @@ export class SettingsComponent implements OnInit {
         pref_income: new FormControl(this.detail.pref_income),
         description: new FormControl(this.detail.description),
         familyDetail: new FormControl(this.detail.familyDetail),
-        image: new FormControl('https://png.pngtree.com/png-vector/20190429/ourmid/pngtree-vector-business-men-icon-png-image_998295.jpg'),
+        image: new FormControl('https://lh4.googleusercontent.com/proxy/H2lE-HK4WQvb9p8-dY86HeNisFCR8CDxqRWEObzQzqMfiY-CNTva9MuuV4aN2UbZFooRKot4TviRqyo0gBrXyyFHUgCQ7YjLVGYJjHN8LsZJEUTaGbDGT-iYbKzx_g'),
       })
     }, 700);
 
   }
 
   onvalueUpdate() {
-    console.log(this.updateProfileGroup.value)
     this.dataService.updateProfile(this.updateProfileGroup.value).subscribe(res => {
       console.dir(res);
     })
