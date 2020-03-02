@@ -1,0 +1,32 @@
+<div class="sidemenu">
+
+  <ul>
+    <li (click)="redirectTo('/listings')">
+      See all profiles
+    </li>
+    <li (click)="redirectTo('/listings')">
+      Edit Profiles
+    </li>
+    <li (click)="redirectTo('/listings')">
+      Add Profile
+    </li>
+    <li (click)="redirectTo('/listings')">
+      See all profiles
+    </li>
+    <li (click)="redirectTo('/listings')">
+      Settings
+    </li>
+
+  </ul>
+  <div (click)="logoutLayout=!logoutLayout" class="adminName">
+    Welcome Muhammad Tahir Awais
+  </div>
+
+  <div *ngIf="logoutLayout" class="logout">
+    Logout
+  </div>
+
+</div>
+<div class="content">
+
+</div>

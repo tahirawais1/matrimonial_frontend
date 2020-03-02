@@ -12,6 +12,9 @@ import { ProfileDetailComponent } from './profileDetail/profileDetail.component'
 import {MatTabsModule} from '@angular/material/tabs';
 import { SettingsComponent } from './settings/settings.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './auth.guard';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 @NgModule({
    declarations: [
@@ -20,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
       SignupComponent,
       ListingsComponent,
       ProfileDetailComponent,
-      SettingsComponent
+      SettingsComponent,
+      AdminPanelComponent
    ],
    imports: [
       BrowserModule,
@@ -30,9 +34,12 @@ import { HttpClientModule } from '@angular/common/http';
       FormsModule,
       ReactiveFormsModule,
       BrowserAnimationsModule,
-      MatTabsModule
+      MatTabsModule,
+      MatSnackBarModule
    ],
-   providers: [],
+   providers: [
+      AuthGuard
+   ],
    bootstrap: [
       AppComponent
    ]

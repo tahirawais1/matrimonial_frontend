@@ -36,7 +36,7 @@ export class DataService {
   }
 
   deleteMethod(id) {
-    return this.httpClient.delete("api/deletePro/", id);
+    return this.httpClient.delete("api/delete", id);
   }
 
   imageUpload(body) {

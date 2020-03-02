@@ -13,3 +13,85 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .btn{
     cursor: pointer;
 }
+
+.navigationMenue{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+    color: white;
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.logoClass{
+    font-size: 19px;
+    background: -webkit-linear-gradient( #ffa9a9,  #f78787);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.menuitems{
+    display: flex;
+
+}
+.nav-items{
+    padding: 5px 20px;
+    color: white; 
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.nav-items:hover{
+    border-radius: 30px;
+    background-color: #f78787;
+    color: white; 
+}
+
+.nav-items-active{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5px 20px;
+    border: 1px solid #f38181;
+    border-radius: 30px;
+    background-color: #f38181;
+    color: white; 
+}
+@media screen and (max-width: 769px) {
+    .logoClass{
+        display: none;
+    }
+    .nav-items{
+        // padding: 5px 20px;
+        color: white; 
+        font-size: 1rem;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .mobilenodisplay{
+        display: none;
+    }
+    
+    .nav-items:hover{
+        border-radius: 30px;
+        background-color: #f78787;
+        color: white; 
+    }
+    
+    .nav-items-active{
+        font-size: 1rem;
+        font-weight: 400;
+        // padding: 5px 20px;
+        border: 1px solid #f38181;
+        border-radius: 30px;
+        background-color: #f38181;
+        color: white; 
+    }
+}
+@media screen and (min-width: 800px) {
+    .bignodisplay{
+        display: none;
+    }
+}

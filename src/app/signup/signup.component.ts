@@ -3,11 +3,13 @@ import { DataService } from '../theme/services/data.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { PageService } from '../theme/services/page.service';
+import { AuthenticationService } from '../theme/services/authentication.service';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  styleUrls: ['./signup.component.scss'],
+  providers: [AuthenticationService]
 })
 export class SignupComponent implements OnInit {
 
@@ -256,8 +258,17 @@ export class SignupComponent implements OnInit {
           formControlName: "educationLevel",
         },
         {
-          inputType: "textField",
+          inputType: "dropdown",
           placeholder: "Education Field",
+          option:
+            [
+              { value: 'CS & IT', text: 'CS & IT' },
+              { value: 'Banking & Finance', text: 'Banking & Finance' },
+              { value: 'Managment', text: 'Managment' },
+              { value: 'Medical', text: 'Medical' },
+              { value: 'Engineering', text: 'Engineering' },
+              { value: 'Arts and Social Sciences', text: 'Arts and Social Sciences' },
+            ],
           formControlName: "educationField",
         },
       ]
@@ -267,8 +278,82 @@ export class SignupComponent implements OnInit {
 
       formFields: [
         {
-          inputType: "textField",
+          inputType: "dropdown",
           placeholder: "Profession",
+          option:
+            [
+              { value: 'Accountant', text: 'Accountant' },
+              { value: 'Actor', text: 'Actor' },
+              { value: 'Actress', text: 'Actress' },
+              { value: 'Air traffic controller', text: 'Air traffic controller' },
+              { value: 'Architect', text: 'Architect' },
+              { value: 'Artist', text: 'Artist' },
+              { value: 'Attorney', text: 'Attorney' },
+              { value: 'Banker', text: 'Banker' },
+              { value: 'Bartender', text: 'Bartender' },
+              { value: 'Barber', text: 'Barber' },
+              { value: 'IT professional', text: 'IT professional' },
+              { value: 'Bookkeeper', text: 'Bookkeeper' },
+              { value: 'Builder', text: 'Builder' },
+              { value: 'Businessman', text: 'Businessman' },
+              { value: 'Businesswoman', text: 'Businesswoman' },
+              { value: 'Businessperson', text: 'Businessperson' },
+              { value: 'Butcher', text: 'Butcher' },
+              { value: 'Carpenter', text: 'Carpenter' },
+              { value: 'Cashier', text: 'Cashier' },
+              { value: 'Chef', text: 'Chef' },
+              { value: 'Coach', text: 'Coach' },
+              { value: 'Dental hygienist', text: 'dental hygienist' },
+              { value: 'Dentist', text: 'dentist' },
+              { value: 'Designer', text: 'designer' },
+              { value: 'Developer', text: 'developer' },
+              { value: 'Dietician', text: 'dietician' },
+              { value: 'Doctor', text: 'doctor' },
+              { value: 'economist', text: 'economist' },
+              { value: 'editor', text: 'editor' },
+              { value: 'electrician', text: 'electrician' },
+              { value: 'engineer', text: 'engineer' },
+              { value: 'farmer', text: 'farmer' },
+              { value: 'filmmaker', text: 'filmmaker' },
+              { value: 'fisherman', text: 'fisherman' },
+              { value: 'flight attendant', text: 'flight attendant' },
+              { value: 'jeweler', text: 'jeweler' },
+              { value: 'judge', text: 'judge' },
+              { value: 'lawyer', text: 'lawyer' },
+              { value: 'mechanic', text: 'mechanic' },
+              { value: 'musician', text: 'musician' },
+              { value: 'nutritionist', text: 'nutritionist' },
+              { value: 'nurse', text: 'nurse' },
+              { value: 'optician', text: 'optician' },
+              { value: 'painter', text: 'painter' },
+              { value: 'pharmacist', text: 'pharmacist' },
+              { value: 'photographer', text: 'photographer' },
+              { value: 'physician', text: 'physician' },
+              { value: 'pilot', text: 'pilot' },
+              { value: 'plumber', text: 'plumber' },
+              { value: 'police officer', text: 'police officer' },
+              { value: 'politician', text: 'politician' },
+              { value: 'professor', text: 'professor' },
+              { value: 'programmer', text: 'programmer' },
+              { value: 'psychologist', text: 'psychologist' },
+              { value: 'receptionist', text: 'receptionist' },
+              { value: 'salesman', text: 'salesman' },
+              { value: 'salesperson', text: 'salesperson' },
+              { value: 'saleswoman', text: 'saleswoman' },
+              { value: 'secretary', text: 'secretary' },
+              { value: 'singer', text: 'singer' },
+              { value: 'surgeon', text: 'surgeon' },
+              { value: 'teacher', text: 'teacher' },
+              { value: 'therapist', text: 'therapist' },
+              { value: 'translator', text: 'translator' },
+              { value: 'translator', text: 'translator' },
+              { value: 'undertaker', text: 'undertaker' },
+              { value: 'veterinarian', text: 'veterinarian' },
+              { value: 'videographer', text: 'videographer' },
+              { value: 'waiter', text: 'waiter' },
+              { value: 'waitress', text: 'waitress' },
+              { value: 'writer', text: 'writer' },
+            ],
           formControlName: "profession",
         },
 
@@ -311,8 +396,75 @@ export class SignupComponent implements OnInit {
           formControlName: "address",
         },
         {
-          inputType: "textField",
+          inputType: "dropdown",
           placeholder: "City",
+          option: [
+            { value: 'Islamabad', text: 'Islamabad' },
+            { value: 'Attock', text: 'Attock' },
+            { value: 'Bahawalpur', text: 'Bahawalpur' },
+            { value: 'Burewala', text: 'Burewala' },
+            { value: 'Chakwal', text: 'Chakwal' },
+            { value: 'Chiniot', text: 'Chiniot' },
+            { value: 'Faisalabad', text: 'Faisalabad' },
+            { value: 'Gujar Khan', text: 'Gujar Khan' },
+            { value: 'Gujranwala', text: 'Gujranwala' },
+            { value: 'Gujrat', text: 'Gujrat' },
+            { value: 'Jhang', text: 'Jhang' },
+            { value: 'Jhelum', text: 'Jhelum' },
+            { value: 'Kallar Syedan', text: 'Kallar Syedan' },
+            { value: 'Kasur', text: 'Kasur' },
+            { value: 'Kharian', text: 'Kharian' },
+            { value: 'Lahore', text: 'Lahore' },
+            { value: 'Mianwali', text: 'Mianwali' },
+            { value: 'Multan', text: 'Multan' },
+            { value: 'Murree', text: 'Murree' },
+            { value: 'Rahim Yar Khan', text: 'Rahim Yar Khan' },
+            { value: 'Rawalpindi', text: 'Rawalpindi' },
+            { value: 'Sadiqabad', text: 'Sadiqabad' },
+            { value: 'Sahiwal', text: 'Sahiwal' },
+            { value: 'Sargodha', text: 'Sargodha' },
+            { value: 'Sheikhupura', text: 'Sheikhupura' },
+            { value: 'Sialkot', text: 'Sialkot' },
+            { value: 'Taxila', text: 'Taxila' },
+            { value: 'Toba Tek Singh', text: 'Toba Tek Singh' },
+            { value: 'Badin', text: 'Badin' },
+            { value: 'Hyderabad', text: 'Hyderabad' },
+            { value: 'Jacobabad', text: 'Jacobabad' },
+            { value: 'Karachi', text: 'Karachi' },
+            { value: 'Khairpur', text: 'Khairpur' },
+            { value: 'Larkana', text: 'Larkana' },
+            { value: 'Mirpur Khas', text: 'Mirpur Khas' },
+            { value: 'Nawabshah', text: 'Nawabshah' },
+            { value: 'Sukkur', text: 'Sukkur' },
+            { value: 'Thatta', text: 'Thatta' },
+            { value: 'Abbottabad', text: 'Abbottabad' },
+            { value: 'Bannu', text: 'Bannu' },
+            { value: 'Battagram', text: 'Battagram' },
+            { value: 'Charsadda', text: 'Charsadda' },
+            { value: 'D.I.Khan', text: 'D.I.Khan' },
+            { value: 'Haripur', text: 'Haripur' },
+            { value: 'Kohat', text: 'Kohat' },
+            { value: 'Mansehra', text: 'Mansehra' },
+            { value: 'Mardan', text: 'Mardan' },
+            { value: 'Nowshera', text: 'Nowshera' },
+            { value: 'Peshawar', text: 'Peshawar' },
+            { value: 'Swat', text: 'Swat' },
+            { value: 'Swabi', text: 'Swabi' },
+            { value: 'Timer', text: 'Timer' },
+            { value: 'garaTank', text: 'garaTank' },
+            { value: 'Chaman', text: 'Chaman' },
+            { value: 'Gwadar', text: 'Gwadar' },
+            { value: 'Khuzdar', text: 'Khuzdar' },
+            { value: 'Quetta', text: 'Quetta' },
+            { value: 'Ziarat', text: 'Ziarat' },
+            { value: 'Bagh', text: 'Bagh' },
+            { value: 'Bhimber', text: 'Bhimber' },
+            { value: 'Kotli', text: 'Kotli' },
+            { value: 'Muzaffarabad', text: 'Muzaffarabad' },
+            { value: 'Rawalakot', text: 'Rawalakot' },
+            { value: 'Gilgit', text: 'Gilgit' },
+            { value: 'Skardu', text: 'Skardu' },
+          ],
           formControlName: "city",
         },
         {
@@ -333,7 +485,7 @@ export class SignupComponent implements OnInit {
   ];
 
 
-  constructor(private pageService: PageService, private dataService: DataService, private router: Router, private route: ActivatedRoute, private formBuilder: FormBuilder) { }
+  constructor(private authService: AuthenticationService, private pageService: PageService, private dataService: DataService, private router: Router, private route: ActivatedRoute, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.loginFormGroup = this.formBuilder.group({
@@ -367,19 +519,18 @@ export class SignupComponent implements OnInit {
     })
   }
 
-  idofLogin;
 
   onLogin() {
-    this.dataService.login(this.loginFormGroup.value).subscribe((res): any => {
-      this.idofLogin = res[0].id;
-      if (res && res[0] && res[0].id) {
-        this.router.navigate(['/settings'], { queryParams: { page: this.idofLogin } });
-        window.scrollTo(0, 0);
-      }
-    }, error => {
-      console.dir(error);
-    });
-
+    var output = this.authService.checklogin(this.loginFormGroup.value)
+    
+    if (output == true) {
+      debugger;
+      this.router.navigate(['/settings'], { queryParams: { page: localStorage.getItem('loginid') } });
+    }
+    else {
+      debugger
+      console.log('error')
+    }
   }
   redirectTo(url) {
     this.pageService.changeRoute(url);
@@ -387,12 +538,16 @@ export class SignupComponent implements OnInit {
   onSignup() {
     this.dataService.signupAPI(this.signUpFormGroup.value).subscribe((res): any => {
       console.log(res)
+      localStorage.setItem('loginid',`${res}`)
+      
+      if (res) {
         this.router.navigate(['/settings'], { queryParams: { page: res } });
         window.scrollTo(0, 0);
+      }
     }, error => {
       console.dir(error);
     });
-    
+
   }
 
 }

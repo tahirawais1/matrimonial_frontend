@@ -47,14 +47,15 @@
 .p-20{
     padding: 2rem;
 }
-li{
+.liclass{
     color: #776e6e;
     padding: 1rem 0rem;
 }
 .roundImage{
-    border-radius: 100%;
+    // border-radius: 20px;
     height: 220px;
     width: 220px;
+    // // overflow: hidden;
     margin-top: 1rem;
 }
 
@@ -69,14 +70,6 @@ li{
     background-color: red;
 }
 
-.imageclas{
-    background-size: cover;
-    background: no-repeat center;
-    overflow: hidden; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .photProfile{
     height: 220px;
@@ -135,7 +128,7 @@ p{
     font-weight: 400;
 }
 .py-2{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .btn{
     font-size: 18px;
@@ -161,7 +154,8 @@ p{
     padding-top: 3rem;
 }
 .linked{
-   
+    color: #776e6e;
+    padding: 1rem 0rem;
 }
 .linked:hover{
     color: #f38181;
@@ -185,4 +179,31 @@ p{
     color: #6f6f6f;
     font-size: 17px;
     font-weight: 400;
+}
+
+
+.abspos{
+    position: absolute;
+    top: 1;
+    top: 16.6rem;
+    right: 4.5rem;
+}
+.devoutline{
+    background-color: white;
+    border: 1px solid #f38181;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #f38181;
+    width: 9rem;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.devoutline:hover{
+    background-color: #f38181;
+    color: white;
+    cursor: pointer;
+}
+.img-fluid{
+    border-radius:10px;
 }

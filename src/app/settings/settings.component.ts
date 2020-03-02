@@ -177,8 +177,17 @@ export class SettingsComponent implements OnInit {
           formControlName: "mother_tongue",
         },
         {
-          inputType: "textField",
+          inputType: "dropdown",
           placeholder: "Education Field",
+          option:
+            [
+              { value: 'CS & IT', text: 'CS & IT' },
+              { value: 'Banking & Finance', text: 'Banking & Finance' },
+              { value: 'Managment', text: 'Managment' },
+              { value: 'Medical', text: 'Medical' },
+              { value: 'Engineering', text: 'Engineering' },
+              { value: 'Arts and Social Sciences', text: 'Arts and Social Sciences' },
+            ],
           formControlName: "educationField",
         },
         {
@@ -195,8 +204,83 @@ export class SettingsComponent implements OnInit {
           formControlName: "educationLevel",
         },
         {
-          inputType: "textField",
+          inputType: "dropdown",
           placeholder: "Profession",
+          option:
+            [
+              { value: 'Accountant', text: 'Accountant' },
+              { value: 'Actor', text: 'Actor' },
+              { value: 'Actress', text: 'Actress' },
+              { value: 'Air traffic controller', text: 'Air traffic controller' },
+              { value: 'Architect', text: 'Architect' },
+              { value: 'Artist', text: 'Artist' },
+              { value: 'Attorney', text: 'Attorney' },
+              { value: 'Banker', text: 'Banker' },
+              { value: 'Bartender', text: 'Bartender' },
+              { value: 'Barber', text: 'Barber' },
+              { value: 'IT professional', text: 'IT professional' },
+              { value: 'Bookkeeper', text: 'Bookkeeper' },
+              { value: 'Builder', text: 'Builder' },
+              { value: 'Businessman', text: 'Businessman' },
+              { value: 'Businesswoman', text: 'Businesswoman' },
+              { value: 'Businessperson', text: 'Businessperson' },
+              { value: 'Butcher', text: 'Butcher' },
+              { value: 'Carpenter', text: 'Carpenter' },
+              { value: 'Cashier', text: 'Cashier' },
+              { value: 'Chef', text: 'Chef' },
+              { value: 'Coach', text: 'Coach' },
+              { value: 'Dental hygienist', text: 'dental hygienist' },
+              { value: 'Dentist', text: 'dentist' },
+              { value: 'Designer', text: 'designer' },
+              { value: 'Developer', text: 'developer' },
+              { value: 'Dietician', text: 'dietician' },
+              { value: 'Doctor', text: 'doctor' },
+              { value: 'economist', text: 'economist' },
+              { value: 'editor', text: 'editor' },
+              { value: 'electrician', text: 'electrician' },
+              { value: 'engineer', text: 'engineer' },
+              { value: 'farmer', text: 'farmer' },
+              { value: 'filmmaker', text: 'filmmaker' },
+              { value: 'fisherman', text: 'fisherman' },
+              { value: 'flight attendant', text: 'flight attendant' },
+              { value: 'jeweler', text: 'jeweler' },
+              { value: 'judge', text: 'judge' },
+              { value: 'lawyer', text: 'lawyer' },
+              { value: 'mechanic', text: 'mechanic' },
+              { value: 'musician', text: 'musician' },
+              { value: 'nutritionist', text: 'nutritionist' },
+              { value: 'nurse', text: 'nurse' },
+              { value: 'optician', text: 'optician' },
+              { value: 'painter', text: 'painter' },
+              { value: 'pharmacist', text: 'pharmacist' },
+              { value: 'photographer', text: 'photographer' },
+              { value: 'physician', text: 'physician' },
+              { value: 'pilot', text: 'pilot' },
+              { value: 'plumber', text: 'plumber' },
+              { value: 'police officer', text: 'police officer' },
+              { value: 'politician', text: 'politician' },
+              { value: 'professor', text: 'professor' },
+              { value: 'programmer', text: 'programmer' },
+              { value: 'psychologist', text: 'psychologist' },
+              { value: 'receptionist', text: 'receptionist' },
+              { value: 'salesman', text: 'salesman' },
+              { value: 'salesperson', text: 'salesperson' },
+              { value: 'saleswoman', text: 'saleswoman' },
+              { value: 'secretary', text: 'secretary' },
+              { value: 'singer', text: 'singer' },
+              { value: 'surgeon', text: 'surgeon' },
+              { value: 'teacher', text: 'teacher' },
+              { value: 'therapist', text: 'therapist' },
+              { value: 'translator', text: 'translator' },
+              { value: 'translator', text: 'translator' },
+              { value: 'undertaker', text: 'undertaker' },
+              { value: 'veterinarian', text: 'veterinarian' },
+              { value: 'videographer', text: 'videographer' },
+              { value: 'waiter', text: 'waiter' },
+              { value: 'waitress', text: 'waitress' },
+              { value: 'writer', text: 'writer' },
+
+            ],
           formControlName: "profession",
         },
         {
@@ -204,12 +288,12 @@ export class SettingsComponent implements OnInit {
           placeholder: "Mothly Income",
           option:
             [
-              { value: 'Less than 25000 PKR', text:  'Less than 25000 PKR' },
-              { value: '30,000 PKR', text:  '30,000 PKR' },
-              { value: '40,000 PKR', text:  '40,000 PKR' },
-              { value: '50,000 PKR', text:  '50,000 PKR' },
-              { value: '60,000 PKR', text:  '60,000 PKR' },
-              { value: '70,000 PKR', text:  '70,000 PKR' },
+              { value: 'Less than 25000 PKR', text: 'Less than 25000 PKR' },
+              { value: '30,000 PKR', text: '30,000 PKR' },
+              { value: '40,000 PKR', text: '40,000 PKR' },
+              { value: '50,000 PKR', text: '50,000 PKR' },
+              { value: '60,000 PKR', text: '60,000 PKR' },
+              { value: '70,000 PKR', text: '70,000 PKR' },
               { value: '100,000 PKR', text: '100,000 PKR' },
               { value: '200,000 PKR', text: '200,000 PKR' },
               { value: '300,000 PKR', text: '300,000 PKR' },
@@ -219,15 +303,83 @@ export class SettingsComponent implements OnInit {
               { value: '700,000 PKR', text: '700,000 PKR' },
               { value: '800,000 PKR', text: '800,000 PKR' },
               { value: '900,000 PKR', text: '900,000 PKR' },
-              { value: '1000,000 PKR', text:'1000,000 PKR' },
-              { value: 'Above than 1000,000 PKR', text:'Above than 1000,000 PKR' },
+              { value: '1000,000 PKR', text: '1000,000 PKR' },
+              { value: 'Above than 1000,000 PKR', text: 'Above than 1000,000 PKR' },
             ],
           formControlName: "income",
         },
 
         {
-          inputType: "textField",
+          inputType: "dropdown",
           placeholder: "City",
+          option:
+            [
+              { value: 'Islamabad', text: 'Islamabad' },
+              { value: 'Attock', text: 'Attock' },
+              { value: 'Bahawalpur', text: 'Bahawalpur' },
+              { value: 'Burewala', text: 'Burewala' },
+              { value: 'Chakwal', text: 'Chakwal' },
+              { value: 'Chiniot', text: 'Chiniot' },
+              { value: 'Faisalabad', text: 'Faisalabad' },
+              { value: 'Gujar Khan', text: 'Gujar Khan' },
+              { value: 'Gujranwala', text: 'Gujranwala' },
+              { value: 'Gujrat', text: 'Gujrat' },
+              { value: 'Jhang', text: 'Jhang' },
+              { value: 'Jhelum', text: 'Jhelum' },
+              { value: 'Kallar Syedan', text: 'Kallar Syedan' },
+              { value: 'Kasur', text: 'Kasur' },
+              { value: 'Kharian', text: 'Kharian' },
+              { value: 'Lahore', text: 'Lahore' },
+              { value: 'Mianwali', text: 'Mianwali' },
+              { value: 'Multan', text: 'Multan' },
+              { value: 'Murree', text: 'Murree' },
+              { value: 'Rahim Yar Khan', text: 'Rahim Yar Khan' },
+              { value: 'Rawalpindi', text: 'Rawalpindi' },
+              { value: 'Sadiqabad', text: 'Sadiqabad' },
+              { value: 'Sahiwal', text: 'Sahiwal' },
+              { value: 'Sargodha', text: 'Sargodha' },
+              { value: 'Sheikhupura', text: 'Sheikhupura' },
+              { value: 'Sialkot', text: 'Sialkot' },
+              { value: 'Taxila', text: 'Taxila' },
+              { value: 'Toba Tek Singh', text: 'Toba Tek Singh' },
+              { value: 'Badin', text: 'Badin' },
+              { value: 'Hyderabad', text: 'Hyderabad' },
+              { value: 'Jacobabad', text: 'Jacobabad' },
+              { value: 'Karachi', text: 'Karachi' },
+              { value: 'Khairpur', text: 'Khairpur' },
+              { value: 'Larkana', text: 'Larkana' },
+              { value: 'Mirpur Khas', text: 'Mirpur Khas' },
+              { value: 'Nawabshah', text: 'Nawabshah' },
+              { value: 'Sukkur', text: 'Sukkur' },
+              { value: 'Thatta', text: 'Thatta' },
+              { value: 'Abbottabad', text: 'Abbottabad' },
+              { value: 'Bannu', text: 'Bannu' },
+              { value: 'Battagram', text: 'Battagram' },
+              { value: 'Charsadda', text: 'Charsadda' },
+              { value: 'D.I.Khan', text: 'D.I.Khan' },
+              { value: 'Haripur', text: 'Haripur' },
+              { value: 'Kohat', text: 'Kohat' },
+              { value: 'Mansehra', text: 'Mansehra' },
+              { value: 'Mardan', text: 'Mardan' },
+              { value: 'Nowshera', text: 'Nowshera' },
+              { value: 'Peshawar', text: 'Peshawar' },
+              { value: 'Swat', text: 'Swat' },
+              { value: 'Swabi', text: 'Swabi' },
+              { value: 'Timer', text: 'Timer' },
+              { value: 'garaTank', text: 'garaTank' },
+              { value: 'Chaman', text: 'Chaman' },
+              { value: 'Gwadar', text: 'Gwadar' },
+              { value: 'Khuzdar', text: 'Khuzdar' },
+              { value: 'Quetta', text: 'Quetta' },
+              { value: 'Ziarat', text: 'Ziarat' },
+              { value: 'Bagh', text: 'Bagh' },
+              { value: 'Bhimber', text: 'Bhimber' },
+              { value: 'Kotli', text: 'Kotli' },
+              { value: 'Muzaffarabad', text: 'Muzaffarabad' },
+              { value: 'Rawalakot', text: 'Rawalakot' },
+              { value: 'Gilgit', text: 'Gilgit' },
+              { value: 'Skardu', text: 'Skardu' },
+            ],
           formControlName: "city",
         },
         {
@@ -246,6 +398,8 @@ export class SettingsComponent implements OnInit {
       ]
     }
   ];
+
+
   updateprofilePrefF = [
     {
       formFields: [
@@ -254,6 +408,7 @@ export class SettingsComponent implements OnInit {
           placeholder: "Preference Age",
           option:
             [
+              { value: "doesn't matter", text: "doesn't matter" },
               { value: '18', text: '18 years' },
               { value: '19', text: '19 years' },
               { value: '20', text: '20 years' },
@@ -295,6 +450,7 @@ export class SettingsComponent implements OnInit {
           placeholder: "Select Cast",
           option:
             [
+              { value: "doesn't matter", text: "doesn't matter" },
               { value: 'Butt', text: 'Butt' },
               { value: 'Jutt', text: 'Jutt' },
               { value: 'Mirza', text: 'Mirza' },
@@ -309,6 +465,7 @@ export class SettingsComponent implements OnInit {
           placeholder: "Height",
           option:
             [
+              { value: "doesn't matter", text: "doesn't matter" },
               { value: '134 cm', text: "4'5 - 134cm" },
               { value: '137 cm', text: "4'6 - 137cm" },
               { value: '139 cm', text: "4'7 - 139cm" },
@@ -350,6 +507,7 @@ export class SettingsComponent implements OnInit {
           placeholder: "Select Comunity",
           option:
             [
+              { value: "doesn't matter", text: "doesn't matter" },
               { value: 'Ahle Sunnat', text: 'Ahl E Sunnat' },
               { value: 'Ahle Hadees', text: 'Ahl E Hadees' },
               { value: 'shia', text: 'Shia' },
@@ -361,6 +519,7 @@ export class SettingsComponent implements OnInit {
           placeholder: "Select Religion",
           option:
             [
+              { value: "doesn't matter", text: "doesn't matter" },
               { value: 'Islam', text: 'Islam' },
               { value: 'Sikh', text: 'Sikh' },
               { value: 'Hindu', text: 'Hindu' },
@@ -374,6 +533,7 @@ export class SettingsComponent implements OnInit {
           placeholder: "Martial Status",
           option:
             [
+              { value: "doesn't matter", text: "doesn't matter" },
               { value: 'Never Married', text: 'Never Married' },
               { value: 'Divorced', text: 'Divorced' },
               { value: 'Widowed', text: 'Widowed' },
@@ -395,6 +555,7 @@ export class SettingsComponent implements OnInit {
           placeholder: "Mother Tongue",
           option:
             [
+              { value: "doesn't matter", text: "doesn't matter" },
               { value: 'English', text: 'English' },
               { value: 'Urdu', text: 'Urdu' },
               { value: 'Punjabi', text: 'Punjabi' },
@@ -407,6 +568,14 @@ export class SettingsComponent implements OnInit {
         {
           inputType: "textField",
           placeholder: "Education Field",
+          option: [
+            { value: 'CS & IT', text: 'CS & IT' },
+            { value: 'Banking & Finance', text: 'Banking & Finance' },
+            { value: 'Managment', text: 'Managment' },
+            { value: 'Medical', text: 'Medical' },
+            { value: 'Engineering', text: 'Engineering' },
+            { value: 'Arts and Social Sciences', text: 'Arts and Social Sciences' },
+          ],
           formControlName: "pref_educationField",
         },
         {
@@ -414,6 +583,7 @@ export class SettingsComponent implements OnInit {
           placeholder: "Education Level",
           option:
             [
+              { value: "doesn't matter", text: "doesn't matter" },
               { value: 'Diploma', text: 'Diploma' },
               { value: 'Matric', text: 'Matric' },
               { value: 'Intermediate', text: 'Intermediate' },
@@ -423,8 +593,82 @@ export class SettingsComponent implements OnInit {
           formControlName: "pref_educationLevel",
         },
         {
-          inputType: "textField",
+          inputType: "dropdown",
           placeholder: "Profession",
+          option: [
+            { value: "doesn't matter", text: "doesn't matter" },
+            { value: 'accountant', text: 'accountant' },
+            { value: 'actor', text: 'actor' },
+            { value: 'actress', text: 'actress' },
+            { value: 'air traffic controller', text: 'air traffic controller' },
+            { value: 'architect', text: 'architect' },
+            { value: 'artist', text: 'artist' },
+            { value: 'attorney', text: 'attorney' },
+            { value: 'banker', text: 'banker' },
+            { value: 'bartender', text: 'bartender' },
+            { value: 'barber', text: 'barber' },
+            { value: 'bookkeeper', text: 'bookkeeper' },
+            { value: 'builder', text: 'builder' },
+            { value: 'businessman', text: 'businessman' },
+            { value: 'businesswoman', text: 'businesswoman' },
+            { value: 'businessperson', text: 'businessperson' },
+            { value: 'butcher', text: 'butcher' },
+            { value: 'carpenter', text: 'carpenter' },
+            { value: 'cashier', text: 'cashier' },
+            { value: 'chef', text: 'chef' },
+            { value: 'coach', text: 'coach' },
+            { value: 'dental hygienist', text: 'dental hygienist' },
+            { value: 'dentist', text: 'dentist' },
+            { value: 'designer', text: 'designer' },
+            { value: 'developer', text: 'developer' },
+            { value: 'dietician', text: 'dietician' },
+            { value: 'doctor', text: 'doctor' },
+            { value: 'economist', text: 'economist' },
+            { value: 'editor', text: 'editor' },
+            { value: 'electrician', text: 'electrician' },
+            { value: 'engineer', text: 'engineer' },
+            { value: 'farmer', text: 'farmer' },
+            { value: 'filmmaker', text: 'filmmaker' },
+            { value: 'fisherman', text: 'fisherman' },
+            { value: 'flight attendant', text: 'flight attendant' },
+            { value: 'jeweler', text: 'jeweler' },
+            { value: 'judge', text: 'judge' },
+            { value: 'lawyer', text: 'lawyer' },
+            { value: 'mechanic', text: 'mechanic' },
+            { value: 'musician', text: 'musician' },
+            { value: 'nutritionist', text: 'nutritionist' },
+            { value: 'nurse', text: 'nurse' },
+            { value: 'optician', text: 'optician' },
+            { value: 'painter', text: 'painter' },
+            { value: 'pharmacist', text: 'pharmacist' },
+            { value: 'photographer', text: 'photographer' },
+            { value: 'physician', text: 'physician' },
+            { value: 'pilot', text: 'pilot' },
+            { value: 'plumber', text: 'plumber' },
+            { value: 'police officer', text: 'police officer' },
+            { value: 'politician', text: 'politician' },
+            { value: 'professor', text: 'professor' },
+            { value: 'programmer', text: 'programmer' },
+            { value: 'psychologist', text: 'psychologist' },
+            { value: 'receptionist', text: 'receptionist' },
+            { value: 'salesman', text: 'salesman' },
+            { value: 'salesperson', text: 'salesperson' },
+            { value: 'saleswoman', text: 'saleswoman' },
+            { value: 'secretary', text: 'secretary' },
+            { value: 'singer', text: 'singer' },
+            { value: 'surgeon', text: 'surgeon' },
+            { value: 'teacher', text: 'teacher' },
+            { value: 'therapist', text: 'therapist' },
+            { value: 'translator', text: 'translator' },
+            { value: 'translator', text: 'translator' },
+            { value: 'undertaker', text: 'undertaker' },
+            { value: 'veterinarian', text: 'veterinarian' },
+            { value: 'videographer', text: 'videographer' },
+            { value: 'waiter', text: 'waiter' },
+            { value: 'waitress', text: 'waitress' },
+            { value: 'writer', text: 'writer' },
+
+          ],
           formControlName: "pref_profession",
         },
         {
@@ -432,6 +676,7 @@ export class SettingsComponent implements OnInit {
           placeholder: "Mothly Income",
           option:
             [
+              { value: "doesn't matter", text: "doesn't matter" },
               { value: '20000', text: 'Less than 25000 PKR' },
               { value: '30000', text: '30,000 PKR' },
               { value: '40000', text: '40,000 PKR' },
@@ -454,8 +699,77 @@ export class SettingsComponent implements OnInit {
         },
 
         {
-          inputType: "textField",
+          inputType: "dropdown",
           placeholder: "City",
+          option:
+            [
+              { value: "doesn't matter", text: "doesn't matter" },
+              { value: 'Islamabad', text: 'Islamabad' },
+              { value: 'Attock', text: 'Attock' },
+              { value: 'Bahawalpur', text: 'Bahawalpur' },
+              { value: 'Burewala', text: 'Burewala' },
+              { value: 'Chakwal', text: 'Chakwal' },
+              { value: 'Chiniot', text: 'Chiniot' },
+              { value: 'Faisalabad', text: 'Faisalabad' },
+              { value: 'Gujar Khan', text: 'Gujar Khan' },
+              { value: 'Gujranwala', text: 'Gujranwala' },
+              { value: 'Gujrat', text: 'Gujrat' },
+              { value: 'Jhang', text: 'Jhang' },
+              { value: 'Jhelum', text: 'Jhelum' },
+              { value: 'Kallar Syedan', text: 'Kallar Syedan' },
+              { value: 'Kasur', text: 'Kasur' },
+              { value: 'Kharian', text: 'Kharian' },
+              { value: 'Lahore', text: 'Lahore' },
+              { value: 'Mianwali', text: 'Mianwali' },
+              { value: 'Multan', text: 'Multan' },
+              { value: 'Murree', text: 'Murree' },
+              { value: 'Rahim Yar Khan', text: 'Rahim Yar Khan' },
+              { value: 'Rawalpindi', text: 'Rawalpindi' },
+              { value: 'Sadiqabad', text: 'Sadiqabad' },
+              { value: 'Sahiwal', text: 'Sahiwal' },
+              { value: 'Sargodha', text: 'Sargodha' },
+              { value: 'Sheikhupura', text: 'Sheikhupura' },
+              { value: 'Sialkot', text: 'Sialkot' },
+              { value: 'Taxila', text: 'Taxila' },
+              { value: 'Toba Tek Singh', text: 'Toba Tek Singh' },
+              { value: 'Badin', text: 'Badin' },
+              { value: 'Hyderabad', text: 'Hyderabad' },
+              { value: 'Jacobabad', text: 'Jacobabad' },
+              { value: 'Karachi', text: 'Karachi' },
+              { value: 'Khairpur', text: 'Khairpur' },
+              { value: 'Larkana', text: 'Larkana' },
+              { value: 'Mirpur Khas', text: 'Mirpur Khas' },
+              { value: 'Nawabshah', text: 'Nawabshah' },
+              { value: 'Sukkur', text: 'Sukkur' },
+              { value: 'Thatta', text: 'Thatta' },
+              { value: 'Abbottabad', text: 'Abbottabad' },
+              { value: 'Bannu', text: 'Bannu' },
+              { value: 'Battagram', text: 'Battagram' },
+              { value: 'Charsadda', text: 'Charsadda' },
+              { value: 'D.I.Khan', text: 'D.I.Khan' },
+              { value: 'Haripur', text: 'Haripur' },
+              { value: 'Kohat', text: 'Kohat' },
+              { value: 'Mansehra', text: 'Mansehra' },
+              { value: 'Mardan', text: 'Mardan' },
+              { value: 'Nowshera', text: 'Nowshera' },
+              { value: 'Peshawar', text: 'Peshawar' },
+              { value: 'Swat', text: 'Swat' },
+              { value: 'Swabi', text: 'Swabi' },
+              { value: 'Timer', text: 'Timer' },
+              { value: 'garaTank', text: 'garaTank' },
+              { value: 'Chaman', text: 'Chaman' },
+              { value: 'Gwadar', text: 'Gwadar' },
+              { value: 'Khuzdar', text: 'Khuzdar' },
+              { value: 'Quetta', text: 'Quetta' },
+              { value: 'Ziarat', text: 'Ziarat' },
+              { value: 'Bagh', text: 'Bagh' },
+              { value: 'Bhimber', text: 'Bhimber' },
+              { value: 'Kotli', text: 'Kotli' },
+              { value: 'Muzaffarabad', text: 'Muzaffarabad' },
+              { value: 'Rawalakot', text: 'Rawalakot' },
+              { value: 'Gilgit', text: 'Gilgit' },
+              { value: 'Skardu', text: 'Skardu' },
+            ],
           formControlName: "pref_city",
         },
         {
@@ -463,6 +777,7 @@ export class SettingsComponent implements OnInit {
           placeholder: "Country",
           option:
             [
+              { value: "doesn't matter", text: "doesn't matter" },
               { value: 'pakistan', text: 'Pakistan' },
               { value: 'india', text: 'india' },
               { value: 'england', text: 'England' },
@@ -552,19 +867,19 @@ export class SettingsComponent implements OnInit {
   ];
 
 
-  constructor(private pageService:PageService, private formBuilder: FormBuilder, private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private pageService: PageService, private formBuilder: FormBuilder, private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.sub = this.route.queryParams
-    .subscribe(params => {
-      this.page = +params['page']  ;
-    });
+      .subscribe(params => {
+        this.page = +params['page'];
+      });
     console.log(this.page)
 
-    this.dataService.getOneList(this.page).subscribe(data => {
+    this.dataService.getOneList(localStorage.getItem('loginid')).subscribe(data => {
       this.detail = data;
       console.log(this.detail);
-    },(error) => {
+    }, (error) => {
       console.log(error);
     });
 
@@ -604,7 +919,7 @@ export class SettingsComponent implements OnInit {
         pref_income: new FormControl(this.detail.pref_income),
         description: new FormControl(this.detail.description),
         familyDetail: new FormControl(this.detail.familyDetail),
-        image: new FormControl('https://icons-for-free.com/iconfiles/png/512/customer+information+personal+profile+user+icon-1320086045331670685.png'),
+        image: new FormControl('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2I3PugwGnLX62xhM8YojIwsL-fhQkWmuUJHQ2ya4KPtZN6QEIfw&s'),
       })
     }, 700);
 
@@ -617,15 +932,21 @@ export class SettingsComponent implements OnInit {
     window.location.reload();
 
   }
-
-  onDelete() {
-    this.dataService.deleteMethod(this.page).subscribe(res => {
-      window.location.reload();
-      ///route to Home and expire settings links
-    }
-    )
+  onLogout() {
+    localStorage.removeItem('loginid');
+    this.pageService.changeRoute('/');
   }
-  selectedFile: Array < File > ;
+  myid = localStorage.getItem('loginid');
+
+  onDelete(){
+    this.dataService.deleteMethod(this.myid).subscribe(res => {
+    });
+    // window.location.reload();
+    // localStorage.removeItem('loginid');
+
+  }
+
+  selectedFile: Array<File>;
 
   redirectTo(url) {
     this.pageService.changeRoute(url);
@@ -636,13 +957,13 @@ export class SettingsComponent implements OnInit {
   }
   imageId;
 
-  submit(){
+  submit() {
     let formData = new FormData();
     for (var i = 0; i < this.selectedFile.length; i++) {
-        formData.append("uploads[]", this.selectedFile[i], this.selectedFile[i].name);
+      formData.append("uploads[]", this.selectedFile[i], this.selectedFile[i].name);
     }
     this.dataService.imageUpload(formData).subscribe(res => {
-      this.imageId=res;
+      this.imageId = res;
     })
   }
 }

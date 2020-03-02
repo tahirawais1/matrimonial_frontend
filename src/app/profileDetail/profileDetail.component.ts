@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../theme/services/data.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { PageService } from '../theme/services/page.service';
 
 @Component({
   selector: 'app-profileDetail',
@@ -15,7 +16,7 @@ export class ProfileDetailComponent implements OnInit {
   page;
 
 
-  constructor(private dataService: DataService , private router: Router, private route: ActivatedRoute,) { }
+  constructor(private pageService:PageService, private dataService: DataService , private router: Router, private route: ActivatedRoute,) { }
 
   ngOnInit() {
      this.sub = this.route.queryParams
@@ -30,6 +31,9 @@ export class ProfileDetailComponent implements OnInit {
         console.log(error);
       });
 
+  }
+  redirectTo(url) {
+    this.pageService.changeRoute(url);
   }
   ngOnDestroy() {
     this.sub.unsubscribe();

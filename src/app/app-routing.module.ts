@@ -5,14 +5,17 @@ import { SignupComponent } from './signup/signup.component';
 import { ListingsComponent } from './listings/listings.component';
 import { ProfileDetailComponent } from './profileDetail/profileDetail.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AuthGuard } from './auth.guard';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 
 const routes: Routes = [
   { path: 'signup', component:SignupComponent},
   { path: 'listings', component:ListingsComponent},
-  { path: 'settings', component:SettingsComponent},
-  { path: 'profileDetail', component:ProfileDetailComponent},
+  { path: 'settings', canActivate :[AuthGuard] , component:SettingsComponent},
+  { path: 'profileDetail', canActivate :[AuthGuard] , component:ProfileDetailComponent},
   { path: '', component: HomeComponent },
+//   { path: '', component: AdminPanelComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 
