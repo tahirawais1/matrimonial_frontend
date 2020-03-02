@@ -12,35 +12,35 @@ export class DataService {
   }
 
   getListing() {
-    return this.httpClient.get("api/getAllProfiles");
+    return this.httpClient.get("https://boiling-woodland-13435.herokuapp.com/api/getAllProfiles");
   }
 
   getOneList(id) {
-    return this.httpClient.get("api/profile/" + id);
+    return this.httpClient.get("https://boiling-woodland-13435.herokuapp.com/api/profile/" + id);
   }
 
   signupAPI(body) {
-    return this.httpClient.post("api/signUp", body);
+    return this.httpClient.post("https://boiling-woodland-13435.herokuapp.com/api/signUp", body);
   }
 
   updateProfile(body) {
-    return this.httpClient.post("api/updateProfile" , body);
+    return this.httpClient.post("https://boiling-woodland-13435.herokuapp.com/api/updateProfile" , body);
   }
 
   searching(body) {
-    return this.httpClient.post("api/search", body);
+    return this.httpClient.post("https://boiling-woodland-13435.herokuapp.com/api/search", body);
   }
 
   login(body) {
-    return this.httpClient.post("api/auth", body );
+    return this.httpClient.post("https://boiling-woodland-13435.herokuapp.com/api/auth", body );
   }
 
   deleteMethod(id) {
-    return this.httpClient.delete("api/delete", id);
+    return this.httpClient.delete("https://boiling-woodland-13435.herokuapp.com/api/delete", id);
   }
 
   imageUpload(body) {
-    return this.httpClient.post("api/imagePath", body);
+    return this.httpClient.post("https://boiling-woodland-13435.herokuapp.com/api/imagePath", body);
   }
 
 

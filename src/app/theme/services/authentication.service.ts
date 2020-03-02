@@ -21,6 +21,7 @@ export class AuthenticationService {
     if (this.idofLogin) {
       window.scrollTo(0, 0);
       localStorage.setItem('loginid', `${this.idofLogin}`);
+      console.log(localStorage.getItem('loginid'))
       return true;
     }
     else return false;

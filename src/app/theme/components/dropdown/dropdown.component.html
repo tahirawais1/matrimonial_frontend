@@ -2,7 +2,7 @@
   <mat-form-field>
     <mat-label> {{placeholder}}</mat-label>
     <mat-select [formControlName]="rformcontrolname">
-      <mat-option (selectionChange)="onSelectionChange(args)" *ngFor="let item of options" [value]="item.value">
+      <mat-option (selectionChange)="onSelectionChange()" *ngFor="let item of options" [value]="item.value">
         {{item.text}}
       </mat-option>
     </mat-select>
@@ -13,7 +13,7 @@
   <mat-form-field>
     <mat-label> {{placeholder}}</mat-label>
     <mat-select [formControlName]="rformcontrolname" multiple>
-      <mat-option (selectionChange)="onSelectionChange(args)" *ngFor="let item of options" [value]="item.value">
+      <mat-option (selectionChange)="onSelectionChange()" *ngFor="let item of options" [value]="item.value">
         {{item.text}}
       </mat-option>
     </mat-select>

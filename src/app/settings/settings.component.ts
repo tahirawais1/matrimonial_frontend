@@ -11,6 +11,12 @@ import { PageService } from '../theme/services/page.service';
 })
 export class SettingsComponent implements OnInit {
 
+  editname = false;
+  editpassword = false;
+  editphone = false;
+  editemail = false;
+  editaddress = false;
+  edit = false;
   changeAccountPrefGroup;
   updateProfilePrefGroup;
   updateProfileGroup
@@ -883,7 +889,9 @@ export class SettingsComponent implements OnInit {
       console.log(error);
     });
 
+
     setTimeout(() => {
+      
       this.updateProfileGroup = this.formBuilder.group({
         id: new FormControl(this.page),
         age: new FormControl(this.detail.age),
@@ -919,13 +927,14 @@ export class SettingsComponent implements OnInit {
         pref_income: new FormControl(this.detail.pref_income),
         description: new FormControl(this.detail.description),
         familyDetail: new FormControl(this.detail.familyDetail),
-        image: new FormControl('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2I3PugwGnLX62xhM8YojIwsL-fhQkWmuUJHQ2ya4KPtZN6QEIfw&s'),
+        image: new FormControl('https://png.pngtree.com/png-vector/20190429/ourmid/pngtree-vector-business-men-icon-png-image_998295.jpg'),
       })
     }, 700);
 
   }
 
   onvalueUpdate() {
+    console.log(this.updateProfileGroup.value)
     this.dataService.updateProfile(this.updateProfileGroup.value).subscribe(res => {
       console.dir(res);
     })
@@ -941,8 +950,8 @@ export class SettingsComponent implements OnInit {
   onDelete(){
     this.dataService.deleteMethod(this.myid).subscribe(res => {
     });
-    // window.location.reload();
-    // localStorage.removeItem('loginid');
+    window.location.reload();
+    localStorage.removeItem('loginid');
 
   }
 

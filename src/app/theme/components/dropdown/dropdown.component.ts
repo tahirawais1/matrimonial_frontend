@@ -26,7 +26,7 @@ export class DropdownComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelectionChange(args) {
+  onSelectionChange() {
     // if (args) {
     //   debugger;
     //   this.rformgroup;

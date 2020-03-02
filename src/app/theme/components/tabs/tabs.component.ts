@@ -8,22 +8,22 @@ import { Router } from '@angular/router';
 })
 export class TabsComponent implements OnInit {
 
-    @Input() tabs = [];
-    @Input() selectedIndex;
-    @Input() backLink;
-    @Output() change = new EventEmitter<any>();
+    // @Input() tabs = [];
+    // @Input() selectedIndex;
+    // @Input() backLink;
+    // @Output() change = new EventEmitter<any>();
 
-    currentRoute;
-    showInput = false;
+    // currentRoute;
+    // showInput = false;
   
-    constructor(private router: Router) { }
+    constructor() { }
 
   ngOnInit() {
-    this.currentRoute = this.router.url;
+    // this.currentRoute = this.router.url;
   }
 
-  tabClick(MatTabChangeEvent) {
-    console.log(MatTabChangeEvent);
-    this.change.emit(MatTabChangeEvent.tab.textLabel);
-}
+  // tabClick(MatTabChangeEvent) {
+  //   console.log(MatTabChangeEvent);
+  //   this.change.emit(MatTabChangeEvent.tab.textLabel);
+// }
 }
