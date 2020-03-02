@@ -928,15 +928,22 @@ export class SettingsComponent implements OnInit {
         familyDetail: new FormControl(this.detail.familyDetail),
         image: new FormControl('https://lh4.googleusercontent.com/proxy/H2lE-HK4WQvb9p8-dY86HeNisFCR8CDxqRWEObzQzqMfiY-CNTva9MuuV4aN2UbZFooRKot4TviRqyo0gBrXyyFHUgCQ7YjLVGYJjHN8LsZJEUTaGbDGT-iYbKzx_g'),
       })
-    }, 700);
+    }, 1000);
 
   }
 
   onvalueUpdate() {
+    console.dir(this.updateProfileGroup.value);
+
     this.dataService.updateProfile(this.updateProfileGroup.value).subscribe(res => {
       console.dir(res);
     })
-    window.location.reload();
+    
+
+    setTimeout(() =>{
+
+      window.location.reload();
+    }, 1000);
 
   }
   onLogout() {
