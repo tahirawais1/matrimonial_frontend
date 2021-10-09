@@ -20,7 +20,7 @@ export class SettingsComponent implements OnInit {
   changeAccountPrefGroup;
   updateProfilePrefGroup;
   updateProfileGroup
-  detail:any; 
+  detail: any;
   sub;
   page;
   image;
@@ -829,6 +829,28 @@ export class SettingsComponent implements OnInit {
       ]
     }
   ];
+  time = [
+    {
+      formFields: [
+        {
+          inputType: "textField",
+          placeholder: "select time",
+          formControlName: "time",
+        },
+      ]
+    }
+  ];
+  description = [
+    {
+      formFields: [
+        {
+          inputType: "textField",
+          placeholder: "Enter Description",
+          formControlName: "description",
+        },
+      ]
+    }
+  ];
   changePhone = [
     {
       formFields: [
@@ -938,9 +960,9 @@ export class SettingsComponent implements OnInit {
     this.dataService.updateProfile(this.updateProfileGroup.value).subscribe(res => {
       console.dir(res);
     })
-    
 
-    setTimeout(() =>{
+
+    setTimeout(() => {
 
       window.location.reload();
     }, 1000);
@@ -952,7 +974,7 @@ export class SettingsComponent implements OnInit {
   }
   myid = localStorage.getItem('loginid');
 
-  onDelete(){
+  onDelete() {
     this.dataService.deleteMethod(this.myid).subscribe(res => {
     });
     window.location.reload();

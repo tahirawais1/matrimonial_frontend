@@ -1,0 +1,58 @@
+.bg-grey{
+    background-color: #f6f6f6;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+.paddingcontainer{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.img-fluid-below{
+    height: 25rem;
+    width: 35rem;
+    object-fit: cover;
+}
+.thumbnail{
+    background-color: #ffffff !important;
+}
+.imgprofile{
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    border-radius: 100px;
+}
+.imgprofiles{
+    height: 20rem;
+    width: 20rem;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.p-b-10{
+    padding-bottom: 10px;
+}
+.imageclas{
+    height: 55vh !important;
+    width: 100% !important;
+    }
+    
+    .tbp{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .btnSignup{
+        margin-top: 2rem;
+        color: #0a686e;
+        text-align: right;
+    }
+    .primarytext{
+        color: #0a686e;
+    }
+    .primaryborder{
+        border-bottom:2px solid  #0a686e !important;
+    }
+    .primarybg{
+        background-color: #0a686e;
+    }

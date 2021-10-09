@@ -117,7 +117,7 @@
 		position: absolute;
 		content: "";
 		top: 0; left: 0; right: 0; bottom: 0;
-		background: rgba($primary, .8);
+		background: rgba(#0a686e, .8);
 		z-index: 2;
 		height: 100%;
 		width: 100%;
@@ -352,7 +352,7 @@
 			color: lighten($black, 80%);
 
 			&:hover, &.active {
-				border-bottom: 2px solid $primary;
+				border-bottom: 2px solid #0a686e;
 				color: $black;
 
 			}
@@ -431,7 +431,7 @@
 			}
 			
 			&:hover, &:focus {
-				background: $primary;
+				background: #0a686e;
 			}
 		}
 
@@ -456,7 +456,7 @@
 			}
 			&.active {
 				span {
-					background: $primary;
+					background: #0a686e;
 				}
 			}
 		}
@@ -519,7 +519,7 @@
 				width: 80px;
 				height: 4px;
 				margin-top: -4px;
-				background: $primary;
+				background: #0a686e;
 				top: 0;
 			}
 			.heading {
@@ -547,7 +547,7 @@
 			display: block;
 			border-radius: 50%;
 			opacity: 1;
-			color: $primary!important;
+			color: #0a686e!important;
 			&:hover {
 				opacity: 1;
 			}
@@ -591,7 +591,7 @@
 					}
 				}
 				.meta {
-					color: $primary;
+					color: #0a686e;
 				}
 				&:hover {
 					img {
@@ -636,7 +636,7 @@
 		position: absolute;
 		width: 30px;
 		height: 30px;
-		background: $primary;
+		background: #0a686e;
 		border-radius: 50%;
 		color: $white;
 		> span {
@@ -678,7 +678,7 @@
 			}
 			&.active {
 				a, span {
-					background: $primary;
+					background: #0a686e;
 					color: $white;
 					border: 1px solid transparent;
 				}
@@ -812,7 +812,7 @@
 }
 
 .feature-1 {
-	background: $primary;
+	background: #0a686e;
 	padding: 30px 50px;
 	color: rgba($white, .6);
 	font-size: 15px;
@@ -841,7 +841,7 @@
 }
 .free-quote {
 	@extend .feature-1;
-	background: darken($primary, 5%);
+	background: darken(#0a686e, 5%);
 	.form-control {
 		border: 2px solid rgba($white, .5);
 		background: none;
@@ -874,7 +874,7 @@
 }
 .feature-3 {
 	@extend .feature-1;
-	background: darken($primary, 7%);
+	background: darken(#0a686e, 7%);
 }
 
 .border-primary {
@@ -888,7 +888,7 @@
 		bottom: 0;
 		width: 80px;
 		height: 3px;
-		background: $primary;
+		background: #0a686e;
 	}
 	&.text-center {
 		&:after {
@@ -934,7 +934,7 @@
 	.number {
 		width: 50px;
 		height: 50px;
-		background: $primary;
+		background: #0a686e;
 		color: $white;
 		line-height: 55px;
 		font-weight: 300;
@@ -1004,7 +1004,7 @@
 		line-height: 40px;
 		border-radius: 50%;
 		display: inline-block;
-		background: $primary;
+		background: #0a686e;
 		color: $white;
 	}
 	span {
@@ -1076,8 +1076,8 @@
 		transition: .1s all ease;
 	}
 	&:hover {
-		background: $primary;
-		box-shadow: 0 5px 30px -5px rgba($primary, .5);
+		background: #0a686e;
+		box-shadow: 0 5px 30px -5px rgba(#0a686e, .5);
 		// top: -10px;
 		.caption {
 			color: $white;
@@ -1089,13 +1089,13 @@
 			}
 		}
 		.number {
-			background: darken($primary, 5%);
+			background: darken(#0a686e, 5%);
 			color: $white;
 		}
 	}
 	&:hover {
 		top: -5px;
-		box-shadow: 0 10px 30px -5px rgba($primary, .5);
+		box-shadow: 0 10px 30px -5px rgba(#0a686e, .5);
 	}
 }
 .no-sm-border {
@@ -1142,7 +1142,7 @@
 			font-size: 12px;
 			display: inline-block;
 			padding: 5px 30px;
-			background: $primary;
+			background: #0a686e;
 			border-radius: 30px;
 			color: $white;
 			letter-spacing: .2em;
@@ -1192,7 +1192,7 @@
 }
 
 .accordion-item[aria-expanded="true"] {
-	color: $primary;
+	color: #0a686e;
 }
 
 .listing-horizontal {
@@ -1231,7 +1231,7 @@
 			top: 20px;
 			left: 20px;
 			padding: 5px 30px;
-			background: $primary;
+			background: #0a686e;
 			border-radius: 30px;
 			color: $white;
 			letter-spacing: .2em;
@@ -1277,7 +1277,7 @@
 		.rangeslider__fill {
 			box-shadow: none;
 			height: 7px;
-			background: $primary;
+			background: #0a686e;
 		}
 	}
 	.rangeslider__handle {
@@ -1290,7 +1290,7 @@
 		&:after {
 			background: $white!important;
 			box-shadow: none;
-			border: 3px solid $primary;
+			border: 3px solid #0a686e;
 			border-radius: 50%;
 			height: 20px;
 		width: 20px;
@@ -1315,7 +1315,7 @@
 		margin-bottom: 1.5rem;
 	}
 	.number {
-		color: $primary;
+		color: #0a686e;
 		letter-spacing: .2rem;
 		width: 50px;
 		height: 50px;
@@ -1339,7 +1339,7 @@
 }
 
 .typed-words {
-	color: $primary;
+	color: #0a686e;
 }
 
 .comment-form-wrap {

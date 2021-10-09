@@ -6,16 +6,20 @@ import { ListingsComponent } from './listings/listings.component';
 import { ProfileDetailComponent } from './profileDetail/profileDetail.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AuthGuard } from './auth.guard';
-import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 const routes: Routes = [
-  { path: 'signup', component:SignupComponent},
-  { path: 'listings', component:ListingsComponent},
+  { path: 'joinus', component:SignupComponent},
+  { path: 'aboutUs', component:AboutUsComponent},
+  { path: 'contactUs', component:ContactUsComponent},
+  { path: 'members', component:ListingsComponent},
+  { path: 'gallery', component:GalleryComponent},
   { path: 'settings', canActivate :[AuthGuard] , component:SettingsComponent},
-  { path: 'profileDetail', canActivate :[AuthGuard] , component:ProfileDetailComponent},
+  { path: 'profileDetail' , component:ProfileDetailComponent},
   { path: '', component: HomeComponent },
-//   { path: '', component: AdminPanelComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 

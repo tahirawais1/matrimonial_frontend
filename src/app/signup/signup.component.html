@@ -1,23 +1,31 @@
-
-  <div class="navigationMenue">
-    <div class="logoClass">
-      MakeShadi
-    </div>
-    <div class="menuitems">
-      <div  (click)="redirectTo('/')" class="nav-items">
-        Home
-      </div>
-      <div (click)="redirectTo('/listings')" class="nav-items">
-        Profiles
-      </div>
-      <div (click)="redirectTo('/signup')" class="nav-items-active">
-        Login
-      </div>
-    
-    </div>
+<div class="navigationMenue">
+  <div class="logoClass">
+    <img src="assets/images/copcp.png"  class="logoImage img-fluid rounded">
   </div>
-  
-<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(assets/images/hero_1.jpeg);"
+  <div class="menuitems">
+    <div (click)="redirectTo('/')" class="nav-items">
+      Home
+    </div>
+    <div (click)="redirectTo('/aboutUs')" class="nav-items">
+      About Us
+    </div>
+    <!-- <div (click)="redirectTo('/gallery')" class="nav-items">
+      Gallery
+    </div>
+    <div (click)="redirectTo('/members')" class="nav-items">
+      Members
+    </div> -->
+    <div (click)="redirectTo('/joinus')" class="nav-items-active">
+      Join Us
+    </div>
+    <div (click)="redirectTo('/contactUs')" class="nav-items">
+      Contact Us
+    </div>
+
+  </div>
+</div>
+
+<div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(assets/images/img_4.jpg);"
   data-aos="fade" data-stellar-background-ratio="0.5">
   <div class="container">
     <div class="row align-items-center justify-content-center text-center">
@@ -25,7 +33,7 @@
       <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
-            <h1>Sign Up / Login</h1>
+            <h1>Join Us</h1>
           </div>
         </div>
       </div>
@@ -39,7 +47,7 @@
     <div class="row">
 
       <div class="col-md-6 mb-5 ">
-        <div class="p-5 bg-white" >
+        <div class="p-5 bg-white">
           <h3 class="pb-3">Register Now</h3>
           <app-inputControlSelector [myFromGroup]="signUpFormGroup" [generateForm]="signupData">
           </app-inputControlSelector>
@@ -52,9 +60,9 @@
       </div>
 
       <div class="col-md-6 mb-5">
-        <div class="p-5 bg-white" >
+        <div class="p-5 bg-white">
           <div>
-            <h3 class="pb-3">Already have an account</h3>
+            <h3 class="pb-3">Login</h3>
           </div>
 
           <app-inputControlSelector [myFromGroup]="loginFormGroup" [generateForm]="formData"></app-inputControlSelector>

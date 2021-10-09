@@ -9,11 +9,23 @@ import { PageService } from '../../services/page.service';
 })
 export class FooterComponent implements OnInit {
 
+  subscribe
+
   constructor(private pageService: PageService) { }
 
   ngOnInit() {
   }
-
+  subscribeEmail = [
+    {
+      formFields: [
+        {
+          inputType: "textField",
+          placeholder: "Enter your Email",
+          formControlName: "",
+        },
+      ]
+    }
+  ];
   routeToServices(url) {
     this.pageService.changeRoute(url);
   }

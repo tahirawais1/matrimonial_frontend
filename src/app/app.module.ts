@@ -14,17 +14,23 @@ import { SettingsComponent } from './settings/settings.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './auth.guard';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 @NgModule({
-   declarations: [
+   declarations: [				
       AppComponent,
       HomeComponent,
       SignupComponent,
       ListingsComponent,
       ProfileDetailComponent,
       SettingsComponent,
-      AdminPanelComponent
+      AboutUsComponent,
+      ContactUsComponent,
+      GalleryComponent,
+      ScheduleComponent,
    ],
    imports: [
       BrowserModule,
