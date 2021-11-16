@@ -9,11 +9,11 @@ import { PageService } from '../theme/services/page.service';
   styleUrls: ['./about-us.component.scss']
 })
 export class AboutUsComponent implements OnInit {
-
-  constructor(private router: Router, private dataService: DataService , private pageService: PageService) { }
+  myarray;
+  constructor(private router: Router, private dataService: DataService, private pageService: PageService) { }
 
   ngOnInit() {
-    
+
 
   }
   redirectTo(url) {

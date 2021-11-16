@@ -11,6 +11,11 @@
           [placeholder]="item?.placeholder">
         </app-textField>
       </ng-container>
+      <ng-container *ngIf="item.inputType=='textArea'">
+        <app-textArea [rformgroup]="myFromGroup" [rformcontrolname]="item.formControlName"
+          [placeholder]="item?.placeholder">
+        </app-textArea>
+      </ng-container>
 
       <ng-container *ngIf="item.inputType=='radioBtn'">
         <app-radioBtn [rformgroup]="myFromGroup" [rformcontrolname]="item.formControlName"  

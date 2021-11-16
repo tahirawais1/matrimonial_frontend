@@ -1,0 +1,17 @@
+<div class="bg-white">
+  <div>
+    <h3 class="pb-3">COPCP COMPLAINT FORM</h3>
+    <p class="pb-3">This Form is for all Ozone Park residents, business owners, home owners, partners or mutual
+      interests to file ANY and ALL complaints/issues you may be experiencing. Select one of the
+      following complaint issues as listed below. If not mentioned below please write it in, on the
+      option, other.</p>
+  </div>
+
+  <app-inputControlSelector [myFromGroup]="intresetform" [generateForm]="formData"></app-inputControlSelector>
+
+  <div class="row form-group pt-5">
+    <div class="col-md-12">
+      <input type="submit" value="Submit" (click)="onLogin()" class="btn btn-primary btn-md text-white">
+    </div>
+  </div>
+</div>

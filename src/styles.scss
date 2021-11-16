@@ -56,10 +56,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-size: 1rem;
     font-weight: 400;
     padding: 5px 20px;
-    border: 1px solid #0a686e;
+    border: 1px solid #00b6e5;
     border-radius: 30px;
-    background-color: #0a686e;
+    background-color: #00b6e5;
     color: white; 
+}
+.mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: transparent !important;
 }
 @media screen and (max-width: 769px) {
     .logoClass{
@@ -78,7 +81,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     
     .nav-items:hover{
         border-radius: 30px;
-        background-color: #0a686e;
+        background-color: #00b6e5;
         color: white; 
     }
     
@@ -86,9 +89,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         font-size: 1rem;
         font-weight: 400;
         // padding: 5px 20px;
-        border: 1px solid #0a686e;
+        border: 1px solid #00b6e5;
         border-radius: 30px;
-        background-color: #0a686e;
+        background-color: #00b6e5;
         color: white; 
     }
 }

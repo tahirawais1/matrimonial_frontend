@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5,
 		}
 	}
 	&.btn-outline-primary {
-		color: #0a686e;
+		color: #00b6e5;
 		border-width: 2px;
 		&:hover {
 			color: $white;
@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5,
 		border: 2px solid $white;
 		&:hover {
 			background: $white;
-			color: #0a686e!important;
+			color: #00b6e5!important;
 		}
 	}
 	&.btn-md {
@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5,
 	border-radius: 0;
 	font-family: $font-family-sans-serif;
 	&:active, &:focus {
-		border-color: #0a686e;
+		border-color: #00b6e5;
 	}
 	&:hover, &:active, &:focus {
 		box-shadow: none!important;
@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5,
 		position: absolute;
 		width: 100px;
 		height: 1px;
-		background: #0a686e;
+		background: #00b6e5;
 	}
 	&.text-center {
 		&:after {
@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5,
 			position: absolute;
 			width: 100px;
 			height: 1px;
-			background: #0a686e;
+			background: #00b6e5;
 		}	
 	}
 }
@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5,
 	a {
 		color: lighten($black, 60%); 
 		&:hover {
-			color: #0a686e;
+			color: #00b6e5;
 		}
 	}
 	ul {
@@ -338,7 +338,7 @@ h1, h2, h3, h4, h5,
 	&.primary {
 		li {
 			&:before {
-				color: #0a686e;
+				color: #00b6e5;
 			}
 		}
 	}

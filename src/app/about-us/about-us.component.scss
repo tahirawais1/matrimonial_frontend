@@ -6,9 +6,15 @@
     margin-bottom: 1rem;
 
 }
+.big-font{
+    font-size: 1.1rem;
+}
 .paddingcontainer{
     padding-top: 3rem;
     padding-bottom: 3rem;
+}
+.row{
+    justify-content: center;
 }
 .img-fluid-below{
     height: 25rem;
@@ -44,15 +50,15 @@
     }
     .btnSignup{
         margin-top: 2rem;
-        color: #0a686e;
+        color: #00b6e5;
         text-align: right;
     }
     .primarytext{
-        color: #0a686e;
+        color: #00b6e5;
     }
     .primaryborder{
-        border-bottom:2px solid  #0a686e !important;
+        border-bottom:2px solid  #00b6e5 !important;
     }
     .primarybg{
-        background-color: #0a686e;
+        background-color: #00b6e5;
     }

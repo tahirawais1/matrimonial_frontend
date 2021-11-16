@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../theme/services/data.service';
 import { PageService } from '../theme/services/page.service';
+import {MatDialog} from '@angular/material/dialog';
+import { SnowremovalComponent } from '../snowremoval/snowremoval.component';
+import { ComplaintComponent } from '../complaint/complaint.component';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +15,7 @@ export class HomeComponent implements OnInit {
   
   list;
 
-  constructor(private router: Router, private dataService: DataService , private pageService: PageService) { }
+  constructor(public dialog: MatDialog, private router: Router, private dataService: DataService , private pageService: PageService) { }
 
   ngOnInit() {
     this.dataService.getListing().subscribe(data => {
@@ -25,6 +28,26 @@ export class HomeComponent implements OnInit {
   }
   redirectTo(url) {
     this.pageService.changeRoute(url);
+  }
+  snowremoval(){
+    const dialogRef = this.dialog.open(SnowremovalComponent ,{
+       width: '70vw',
+       height:'90vh'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  complaint(){
+    const dialogRef = this.dialog.open(ComplaintComponent ,{
+       width: '70vw',
+       height:'90vh'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   routeToServices(item) {

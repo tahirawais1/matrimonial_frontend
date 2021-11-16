@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from '../app-routing.module';
 import { PageService } from './services/page.service';
 import { StarAnimationComponent } from './components/starAnimation/starAnimation.component';
-import { TextFieldComponent } from './components/textField/textField.component';
+import { TextFieldComponent} from './components/textField/textField.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -22,6 +22,7 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { InputControlSelectorComponent } from './components/inputControlSelector/inputControlSelector.component';
 import { FormTitleComponent } from './components/formTitle/formTitle.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { TextAreaComponent } from './components/textArea/textArea.component';
 
 
 
@@ -48,6 +49,7 @@ import { MatNativeDateModule } from '@angular/material/core';
         RadioBtnComponent,
         StarAnimationComponent,
         TextFieldComponent,
+        TextAreaComponent,
         DropdownComponent,
         InputControlSelectorComponent,
         FormTitleComponent,
@@ -61,6 +63,7 @@ import { MatNativeDateModule } from '@angular/material/core';
         UpperFooterComponent,
         StarAnimationComponent,
         TextFieldComponent,
+        TextAreaComponent,
         RadioBtnComponent,
         DropdownComponent,
         InputControlSelectorComponent,

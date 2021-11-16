@@ -117,7 +117,7 @@
 		position: absolute;
 		content: "";
 		top: 0; left: 0; right: 0; bottom: 0;
-		background: rgba(#0a686e, .8);
+		background: rgba(#00b6e5, .8);
 		z-index: 2;
 		height: 100%;
 		width: 100%;
@@ -352,7 +352,7 @@
 			color: lighten($black, 80%);
 
 			&:hover, &.active {
-				border-bottom: 2px solid #0a686e;
+				border-bottom: 2px solid #00b6e5;
 				color: $black;
 
 			}
@@ -431,7 +431,7 @@
 			}
 			
 			&:hover, &:focus {
-				background: #0a686e;
+				background: #00b6e5;
 			}
 		}
 
@@ -456,7 +456,7 @@
 			}
 			&.active {
 				span {
-					background: #0a686e;
+					background: #00b6e5;
 				}
 			}
 		}
@@ -519,7 +519,7 @@
 				width: 80px;
 				height: 4px;
 				margin-top: -4px;
-				background: #0a686e;
+				background: #00b6e5;
 				top: 0;
 			}
 			.heading {
@@ -547,7 +547,7 @@
 			display: block;
 			border-radius: 50%;
 			opacity: 1;
-			color: #0a686e!important;
+			color: #00b6e5!important;
 			&:hover {
 				opacity: 1;
 			}
@@ -591,7 +591,7 @@
 					}
 				}
 				.meta {
-					color: #0a686e;
+					color: #00b6e5;
 				}
 				&:hover {
 					img {
@@ -636,7 +636,7 @@
 		position: absolute;
 		width: 30px;
 		height: 30px;
-		background: #0a686e;
+		background: #00b6e5;
 		border-radius: 50%;
 		color: $white;
 		> span {
@@ -678,7 +678,7 @@
 			}
 			&.active {
 				a, span {
-					background: #0a686e;
+					background: #00b6e5;
 					color: $white;
 					border: 1px solid transparent;
 				}
@@ -812,7 +812,7 @@
 }
 
 .feature-1 {
-	background: #0a686e;
+	background: #00b6e5;
 	padding: 30px 50px;
 	color: rgba($white, .6);
 	font-size: 15px;
@@ -841,7 +841,7 @@
 }
 .free-quote {
 	@extend .feature-1;
-	background: darken(#0a686e, 5%);
+	background: darken(#00b6e5, 5%);
 	.form-control {
 		border: 2px solid rgba($white, .5);
 		background: none;
@@ -874,7 +874,7 @@
 }
 .feature-3 {
 	@extend .feature-1;
-	background: darken(#0a686e, 7%);
+	background: darken(#00b6e5, 7%);
 }
 
 .border-primary {
@@ -888,7 +888,7 @@
 		bottom: 0;
 		width: 80px;
 		height: 3px;
-		background: #0a686e;
+		background: #00b6e5;
 	}
 	&.text-center {
 		&:after {
@@ -934,7 +934,7 @@
 	.number {
 		width: 50px;
 		height: 50px;
-		background: #0a686e;
+		background: #00b6e5;
 		color: $white;
 		line-height: 55px;
 		font-weight: 300;
@@ -1004,7 +1004,7 @@
 		line-height: 40px;
 		border-radius: 50%;
 		display: inline-block;
-		background: #0a686e;
+		background: #00b6e5;
 		color: $white;
 	}
 	span {
@@ -1076,8 +1076,8 @@
 		transition: .1s all ease;
 	}
 	&:hover {
-		background: #0a686e;
-		box-shadow: 0 5px 30px -5px rgba(#0a686e, .5);
+		background: #00b6e5;
+		box-shadow: 0 5px 30px -5px rgba(#00b6e5, .5);
 		// top: -10px;
 		.caption {
 			color: $white;
@@ -1089,13 +1089,13 @@
 			}
 		}
 		.number {
-			background: darken(#0a686e, 5%);
+			background: darken(#00b6e5, 5%);
 			color: $white;
 		}
 	}
 	&:hover {
 		top: -5px;
-		box-shadow: 0 10px 30px -5px rgba(#0a686e, .5);
+		box-shadow: 0 10px 30px -5px rgba(#00b6e5, .5);
 	}
 }
 .no-sm-border {
@@ -1142,7 +1142,7 @@
 			font-size: 12px;
 			display: inline-block;
 			padding: 5px 30px;
-			background: #0a686e;
+			background: #00b6e5;
 			border-radius: 30px;
 			color: $white;
 			letter-spacing: .2em;
@@ -1192,7 +1192,7 @@
 }
 
 .accordion-item[aria-expanded="true"] {
-	color: #0a686e;
+	color: #00b6e5;
 }
 
 .listing-horizontal {
@@ -1231,7 +1231,7 @@
 			top: 20px;
 			left: 20px;
 			padding: 5px 30px;
-			background: #0a686e;
+			background: #00b6e5;
 			border-radius: 30px;
 			color: $white;
 			letter-spacing: .2em;
@@ -1277,7 +1277,7 @@
 		.rangeslider__fill {
 			box-shadow: none;
 			height: 7px;
-			background: #0a686e;
+			background: #00b6e5;
 		}
 	}
 	.rangeslider__handle {
@@ -1290,7 +1290,7 @@
 		&:after {
 			background: $white!important;
 			box-shadow: none;
-			border: 3px solid #0a686e;
+			border: 3px solid #00b6e5;
 			border-radius: 50%;
 			height: 20px;
 		width: 20px;
@@ -1315,7 +1315,7 @@
 		margin-bottom: 1.5rem;
 	}
 	.number {
-		color: #0a686e;
+		color: #00b6e5;
 		letter-spacing: .2rem;
 		width: 50px;
 		height: 50px;
@@ -1339,7 +1339,7 @@
 }
 
 .typed-words {
-	color: #0a686e;
+	color: #00b6e5;
 }
 
 .comment-form-wrap {

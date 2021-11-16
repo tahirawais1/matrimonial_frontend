@@ -18,9 +18,24 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { SnowremovalComponent } from './snowremoval/snowremoval.component';
+import { ComplaintComponent } from './complaint/complaint.component';
 
 @NgModule({
-   declarations: [				
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      ThemeModule,
+      FormsModule,
+      ReactiveFormsModule,
+      BrowserAnimationsModule,
+      MatTabsModule,
+      MatSnackBarModule,
+      MatDialogModule
+   ],
+   declarations: [							
       AppComponent,
       HomeComponent,
       SignupComponent,
@@ -31,21 +46,16 @@ import { ScheduleComponent } from './schedule/schedule.component';
       ContactUsComponent,
       GalleryComponent,
       ScheduleComponent,
-   ],
-   imports: [
-      BrowserModule,
-      AppRoutingModule,
-      HttpClientModule,
-      ThemeModule,
-      FormsModule,
-      ReactiveFormsModule,
-      BrowserAnimationsModule,
-      MatTabsModule,
-      MatSnackBarModule
+      SnowremovalComponent,
+      ComplaintComponent
    ],
    providers: [
       AuthGuard
    ],
+   entryComponents: [
+      SnowremovalComponent,
+      ComplaintComponent
+    ],
    bootstrap: [
       AppComponent
    ]
