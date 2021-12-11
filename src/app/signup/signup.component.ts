@@ -127,6 +127,7 @@ export class SignupComponent implements OnInit {
   }
 
   openloginBox() {
+    
     const dialogRef = this.dialog.open(LoginDialogueComponent, {
       width: '30vw',
       height: '55vh'
@@ -138,16 +139,16 @@ export class SignupComponent implements OnInit {
   }
 
   onLogin() {
-    var output = this.authService.checklogin(this.intresetform.value)
+    this.authService.checklogin(this.intresetform.value)
 
-    if (output == true) {
-      debugger;
-      this.router.navigate(['/settings'], { queryParams: { page: localStorage.getItem('loginid') } });
-    }
-    else {
-      debugger
-      console.log('error')
-    }
+    // if (output == true) {
+    //   debugger;
+    //   this.router.navigate(['/settings'], { queryParams: { page: localStorage.getItem('loginid') } });
+    // }
+    // else {
+    //   debugger
+    //   console.log('error')
+    // }
   }
   
   redirectTo(url) {

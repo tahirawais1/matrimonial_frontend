@@ -39,16 +39,16 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4"
-          *ngFor="let item of ['a','b','a','b','a','b','a','b','a','b','a','b','a','b','a','b','a','b']">
+          *ngFor="let item of membersList">
           <div class="d-block d-md-flex listing-horizontal" (click)="routeToServices(item)">
             <div class="lh-content">
-              <h3 class="linked">name</h3>
+              <h3 class="linked">{{item.name}}</h3>
               <div class="row">
                 <div class="col-md-6">
-                  <p>profession</p>
+                  <p>{{item.email}}</p>
                 </div>
                 <div class="col-md-6">
-                  <p>City</p>
+                  <p>{{item.phone}}</p>
                 </div>
               </div>
 
