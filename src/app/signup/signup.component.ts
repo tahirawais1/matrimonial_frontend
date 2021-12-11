@@ -4,6 +4,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { PageService } from '../theme/services/page.service';
 import { AuthenticationService } from '../theme/services/authentication.service';
+import { MatDialog } from '@angular/material';
+import { LoginDialogueComponent } from '../loginDialogue/loginDialogue.component';
 
 @Component({
   selector: 'app-signup',
@@ -103,7 +105,7 @@ export class SignupComponent implements OnInit {
   ];
 
 
-  constructor(private authService: AuthenticationService, private pageService: PageService, private dataService: DataService, private router: Router, private route: ActivatedRoute, private formBuilder: FormBuilder) { }
+  constructor(public dialog: MatDialog , private authService: AuthenticationService, private pageService: PageService, private dataService: DataService, private router: Router, private route: ActivatedRoute, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.intresetform = this.formBuilder.group({
@@ -124,6 +126,16 @@ export class SignupComponent implements OnInit {
     })
   }
 
+  openloginBox() {
+    const dialogRef = this.dialog.open(LoginDialogueComponent, {
+      width: '30vw',
+      height: '55vh'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 
   onLogin() {
     var output = this.authService.checklogin(this.intresetform.value)
@@ -137,9 +149,11 @@ export class SignupComponent implements OnInit {
       console.log('error')
     }
   }
+  
   redirectTo(url) {
     this.pageService.changeRoute(url);
   }
+
   onSignup() {
     this.dataService.signupAPI(this.signUpFormGroup.value).subscribe((res): any => {
       console.log(res)

@@ -21,6 +21,9 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { SnowremovalComponent } from './snowremoval/snowremoval.component';
 import { ComplaintComponent } from './complaint/complaint.component';
+import { LoginDialogueComponent } from './loginDialogue/loginDialogue.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
    imports: [
@@ -33,9 +36,10 @@ import { ComplaintComponent } from './complaint/complaint.component';
       BrowserAnimationsModule,
       MatTabsModule,
       MatSnackBarModule,
-      MatDialogModule
+      MatDialogModule,
+    
    ],
-   declarations: [							
+   declarations: [										
       AppComponent,
       HomeComponent,
       SignupComponent,
@@ -47,14 +51,19 @@ import { ComplaintComponent } from './complaint/complaint.component';
       GalleryComponent,
       ScheduleComponent,
       SnowremovalComponent,
-      ComplaintComponent
+      ComplaintComponent,
+      LoginDialogueComponent,
+      AdminComponent,
+      AdminDashboardComponent,
+      
    ],
    providers: [
       AuthGuard
    ],
    entryComponents: [
       SnowremovalComponent,
-      ComplaintComponent
+      ComplaintComponent,
+      LoginDialogueComponent
     ],
    bootstrap: [
       AppComponent
