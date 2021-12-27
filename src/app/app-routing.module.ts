@@ -11,7 +11,6 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
-
 const routes: Routes = [
   { path: 'joinus', component:SignupComponent},
   { path: 'aboutUs', component:AboutUsComponent},
