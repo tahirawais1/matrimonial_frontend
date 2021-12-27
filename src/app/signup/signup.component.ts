@@ -127,7 +127,7 @@ export class SignupComponent implements OnInit {
   }
 
   openloginBox() {
-    
+
     const dialogRef = this.dialog.open(LoginDialogueComponent, {
       width: '30vw',
       height: '55vh'
@@ -150,7 +150,7 @@ export class SignupComponent implements OnInit {
     //   console.log('error')
     // }
   }
-  
+
   redirectTo(url) {
     this.pageService.changeRoute(url);
   }
@@ -166,6 +166,7 @@ export class SignupComponent implements OnInit {
       }
     }, error => {
       console.dir(error);
+      console.log("error")
     });
 
   }
